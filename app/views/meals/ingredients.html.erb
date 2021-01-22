@@ -1,0 +1,8 @@
+<h5 class="pt-5 align">Ingredients:</h5>
+<div class="description pt-5 align">
+    <div class="allergens-container">
+        <% @meal&.ingredient_tags.each do |ingredient_tag|%>           
+        <p class="allergen"> <%= Ingredient.find(ingredient_tag.ingredient_id).name %></p>
+        <% end %>
+    </div>
+</div>

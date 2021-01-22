@@ -1,0 +1,18 @@
+<div class="main-container">
+    <div class="sec-container">
+        <div class="form-align">
+            <%= simple_form_for [ @current_restaurante, @current_dashboard, @drink ] do |f| %>
+                <%= f.label 'Nombre' %><br>
+                <%= f.text_field :name %><br> 
+                
+                <%= f.label 'Precio' %><br>
+                <%= f.text_field :price %><br>
+
+                <%= f.label 'Descripción' %><br>
+                <%= f.text_area :description %><br>
+
+                <%= f.submit "Confirmar" %>
+            <% end %>
+        </div>
+    </div>
+</div>

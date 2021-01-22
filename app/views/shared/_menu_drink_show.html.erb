@@ -1,0 +1,23 @@
+<div class="main-container">
+  <div class="sec-container">
+    <% @drink_categories.each do |drink_category| %>
+      <div class="category">
+        <h3> <%= drink_category.name %></h3>
+      </div>
+      <% @current_drinks.each do |current_drink| %>
+        <% if drink_category.id == current_drink.drink_category_tag&.drink_category_id %>
+          <%= link_to [@current_restaurante, @menu, current_drink] do %>
+            <div class="meal-card-link-container">
+              <p class="meal-card-link">
+                  <%= current_drink.name %>
+              </p>
+              <p class="meal-card-link">
+                  <%= current_drink.price %>   €
+              </p>
+            </div>
+          <% end %>
+        <% end %>
+      <% end %>
+    <% end %>
+  </div>
+</div>

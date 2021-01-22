@@ -1,0 +1,96 @@
+.card-link {
+  color: $black;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.card-link-container {
+  background-color: $white;
+  height: 180px;
+  box-shadow: 3px 0 10 rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.meal-card-link {
+  color: $black;
+  font-size: 16px;
+  text-transform: capitalize;
+}
+
+.meal-card-link-container {
+  background-color: $white;
+  height: 100px;
+  box-shadow: 3px 0 10 rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.align {
+  margin: 0 auto;
+}
+
+.category {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0 10px 0;
+  text-transform: capitalize;
+}
+
+.allergens-container {
+  display: flex;
+  justify-content: space-around;
+  width: 240px;
+}
+
+.allergen {
+  background-color: $white;
+  width: 75px;
+  padding: 4px 0;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  background-color: $white;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  border-top: solid 1px rgba(128, 128, 128, 0.185);
+  padding: 6px 0;
+  select {
+    width: 200px;
+    padding: 4px 0;
+    margin: 0 5px;
+    text-align: center;
+    text-align-last: center;
+    border-radius: 4px;
+    background-color: white;
+    color: rgb(70, 70, 70);
+  }
+}
+
+.login-container {
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+.dashboard-title {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.form-align {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}

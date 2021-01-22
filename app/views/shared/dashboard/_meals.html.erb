@@ -1,0 +1,18 @@
+<div class="main-container">
+    <div class="sec-container">
+        <%=  link_to 'new', new_restaurante_dashboard_meal_path(@current_restaurante, @current_dashboard) %>
+        <br><br><br><br>
+        <% @meals.each do |meal| %>
+            <div class="dashboard-meal-card">
+                <%= link_to [@current_restaurante, @current_dashboard, meal] do%>
+                    <%= meal.name %>
+                    <%= meal.price %>
+                    
+                <% end %>    
+                <%=  link_to 'edit', edit_restaurante_dashboard_meal_path(@current_restaurante, @current_dashboard, meal) %>
+                <%= link_to 'Delete', [@current_restaurante, @current_dashboard, meal], method: :delete, data: {confirm: 'Are you sure?'} %>
+            </div>
+            <br>
+        <% end %>
+    </div>
+</div>

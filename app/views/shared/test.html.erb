@@ -1,0 +1,7 @@
+  <select name="meal_categories" id="meal_categories">
+    <option value="all" disabled selected>Categorias</option>
+    <option value="all">Todas</option>
+    <% @meal_categories. each do |meal_category| %>
+      <option value="<%= meal_category.category_title %>"><%= meal_category.name %></option>
+    <% end %>
+  </select>

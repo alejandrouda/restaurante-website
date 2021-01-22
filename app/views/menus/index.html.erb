@@ -1,0 +1,17 @@
+<%=    link_to restaurantes_path(@restaurantes) do %>
+  <div class="back-arrow back-arrow-page">
+    <i class="fas fa-arrow-left"></i>
+  </div>
+<% end %>
+
+<div class="main-container">
+  <div class="sec-container">
+    <% @current_restaurante.menus.each do |menu|%>
+      <%=    link_to [@current_restaurante, menu] do %>
+        <div class="card-link-container">
+          <p class="card-link"><%= menu.name %></p>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>

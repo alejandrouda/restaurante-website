@@ -1,0 +1,21 @@
+<%#=  link_to [@current_restaurante, @current_menu] do %>
+  <%# <div class="back-arrow back-arrow-page">
+    <i class="fas fa-arrow-left"></i>
+  </div> %>
+<%# end %>
+
+<div class="main-container">
+    <div class="sec-container">
+        <div class="meal-show-container" style="display:flex; flex-direction: column; justify-content: center">
+            <div class="name pt-3 align">
+                <%= @drink.name %>
+            </div>
+            <div class="price pt-5 align">
+                <%= @drink.price %> €
+            </div>
+            <div class="description pt-5 align">
+                <%= @drink.description %>
+            </div>
+        </div>
+    </div>
+</div>

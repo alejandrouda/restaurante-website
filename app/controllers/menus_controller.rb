@@ -10,7 +10,11 @@ class MenusController < ApplicationController
 
   def show
     @meals = Meal.all
-    @current_meals = Meal.where(menu_id: @menu.id)
+    @meal_all = Meal.where(menu_id: @menu.id)
+    @meal_glutenfree = Filter.find_by(filter_title: 'glutenfree').meals.where(menu_id: @menu.id)
+    @meal_unlactosed = Filter.find_by(filter_title: 'unlactosed').meals.where(menu_id: @menu.id)
+    @meal_vegan = Filter.find_by(filter_title: 'vegan').meals.where(menu_id: @menu.id)
+    @meal_vegetarian = Filter.find_by(filter_title: 'vegetarian').meals.where(menu_id: @menu.id)
     @current_drinks = Drink.where(menu_id: @menu.id)
     @current_restaurante = Restaurante.find(params[:restaurante_id].to_i)
     @meal_categories = MealCategory.all

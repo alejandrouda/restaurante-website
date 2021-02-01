@@ -280,25 +280,25 @@ p "Allergen tags created!"
 p 'Creating filters...'
 
 vegan= Filter.new(name:"Vegano",
-                        filter_title: "vegano"
+                        filter_title: "vegan"
                         )
 vegan.save!
 p vegan
 
 vegetarian= Filter.new(name:"Vegetariano",
-                       filter_title: "vegetariano"
+                       filter_title: "vegetarian"
                       )
 vegetarian.save!
 p vegetarian
 
 unlactosed= Filter.new(name:"Sin lactosa",
-                       filter_title: "sinlactosa"
+                       filter_title: "unlactosed"
                       )
 unlactosed.save!
 p unlactosed
 
 gluten_free= Filter.new(name:"Sin gluten",
-                        filter_title: "singluten"
+                        filter_title: "glutenfree"
                        )
 gluten_free.save!
 p gluten_free

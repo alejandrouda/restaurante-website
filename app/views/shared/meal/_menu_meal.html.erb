@@ -1,0 +1,5 @@
+<div class="main-container">
+    <div class="sec-container">
+        <%= Filter.find_by(filter_title: 'vegetariano').meals.each {|m| m} %>
+    </div>
+</div>

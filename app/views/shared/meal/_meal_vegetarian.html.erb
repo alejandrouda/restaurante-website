@@ -1,0 +1,48 @@
+<div class="main-container">
+  <div class="sec-container">
+    <div class="meal-index-content">
+      <div id="all">
+        <% @meal_categories.each do |meal_category| %>
+          <div id="<%=meal_category.name.downcase%>" class='category-selector'>
+            <div class="category">
+              <h3> <%= meal_category.name %></h3>
+            </div>
+            <div class="category-content">
+              <% @meal_vegetarian.each do |current_meal| %>
+              
+                <%# ------------------Assigning dinamic class to meals--------------------- %>
+                <% str = "" %>
+                <%str << 'all' if current_meal.filters == []%>
+                <% current_meal.filters&.each do |f| %>
+                 <%str << f&.filter_title%>
+                 <%str << ' ' if f != current_meal.filters.last%>
+                 <%str << ' all' if f == current_meal.filters.last%>
+                 
+                <%end %>
+
+                <% if meal_category.id == current_meal.meal_category_tag&.meal_category_id %>
+                <%# ----------- Pending to make modal, a tag is to keep filter working------------- %>
+                  <%#= link_to [@current_restaurante, @menu, current_meal] do %>
+                  <a href="#">
+                    <div class="<%=str%>" id=meal-card>
+                      <div class="meal-card-link-container">
+                        <p class="meal-card-link">
+                            <%= current_meal.name %>
+                            
+                        </p>
+                        <p class="meal-card-link">
+                            <%= current_meal.price %>   €
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                  <%# end %>
+                <% end %>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

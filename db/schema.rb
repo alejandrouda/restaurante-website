@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_20_101956) do
+ActiveRecord::Schema.define(version: 2021_01_25_110815) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -158,26 +158,6 @@ ActiveRecord::Schema.define(version: 2021_01_20_101956) do
     t.index ["restaurante_id"], name: "index_menus_on_restaurante_id"
   end
 
-  create_table "order_products", force: :cascade do |t|
-    t.bigint "meal_id", null: false
-    t.bigint "drink_id", null: false
-    t.bigint "set_menu_id", null: false
-    t.bigint "table_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.bigint "orders_id", null: false
-    t.index ["drink_id"], name: "index_order_products_on_drink_id"
-    t.index ["meal_id"], name: "index_order_products_on_meal_id"
-    t.index ["orders_id"], name: "index_order_products_on_orders_id"
-    t.index ["set_menu_id"], name: "index_order_products_on_set_menu_id"
-    t.index ["table_id"], name: "index_order_products_on_table_id"
-  end
-
-  create_table "orders", force: :cascade do |t|
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "restaurantes", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -194,17 +174,6 @@ ActiveRecord::Schema.define(version: 2021_01_20_101956) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["restaurante_id"], name: "index_set_menus_on_restaurante_id"
-  end
-
-  create_table "tables", force: :cascade do |t|
-    t.integer "table_number"
-    t.string "section"
-    t.bigint "restaurante_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.string "code"
-    t.boolean "active", default: false
-    t.index ["restaurante_id"], name: "index_tables_on_restaurante_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -234,12 +203,6 @@ ActiveRecord::Schema.define(version: 2021_01_20_101956) do
   add_foreign_key "meal_category_tags", "meals"
   add_foreign_key "meals", "menus"
   add_foreign_key "menus", "restaurantes"
-  add_foreign_key "order_products", "drinks"
-  add_foreign_key "order_products", "meals"
-  add_foreign_key "order_products", "orders", column: "orders_id"
-  add_foreign_key "order_products", "set_menus"
-  add_foreign_key "order_products", "tables"
   add_foreign_key "restaurantes", "users"
   add_foreign_key "set_menus", "restaurantes"
-  add_foreign_key "tables", "restaurantes"
 end

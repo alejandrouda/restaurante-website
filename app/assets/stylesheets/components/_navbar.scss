@@ -1,16 +1,16 @@
 $background-color: rgba(10, 25, 47, 0.85);
-$primary-color: rgb(100, 255, 218);
-$secondary-color: rgb(186, 197, 225);
+$primary-color: #f2a753;
+$secondary-color: #ffc481;
 $third-color: rgb(63, 102, 193);
 
 $white: rgb(251, 251, 251);
 $black: rgba(10, 25, 47, 0.85);
 
 nav {
-  height: 59px;
+  height: 80px;
   font-size: 14px;
   font-weight: 500;
-  padding: 10px 40px 0 40px;
+  padding: calc((80px - 53px) / 2) 40px;
   background-color: $white;
 }
 
@@ -22,19 +22,29 @@ nav {
   align-items: center;
 }
 
-.nav-logo {
-}
 .nav-elements {
-  width: 50%;
+  width: 70%;
   display: flex;
   justify-content: space-between;
 }
 
-.nav-links {
-  width: 80%;
-  padding-right: 10%;
+.nav-responsive {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.nav-sec-elements {
   display: flex;
   justify-content: space-around;
+  width: 30%;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  margin-block-end: 0;
+  width: 70%;
 }
 
 .burger-menu {
@@ -58,6 +68,15 @@ nav {
 .back-arrow {
   font-size: 24px;
   color: $black;
+}
+
+.language-selector {
+  display: flex;
+  align-items: center;
+  p {
+    margin-block-end: 0;
+    padding-right: 5px;
+  }
 }
 
 .burger-menu {
@@ -88,11 +107,11 @@ nav {
     width: 100%;
     overflow-x: hidden !important;
   }
-  .nav-links {
+  .nav-responsive {
     position: absolute;
     right: 0px;
-    height: calc(100vh - 59px);
-    top: 59px;
+    height: calc(100vh - 80px);
+    top: 80px;
     align-items: top;
     margin-block-start: 0;
     padding: 0;
@@ -103,9 +122,16 @@ nav {
     width: 100vw !important;
     transform: translateX(100%);
   }
-
   .nav-links {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-responsive {
     li {
+      opacity: 0;
+    }
+    .nav-sec-elements {
       opacity: 0;
     }
   }
@@ -124,6 +150,10 @@ nav {
 
   .nav-font {
     font-size: 18px;
+  }
+
+  .language-selector {
+    color: white;
   }
 }
 

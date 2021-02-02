@@ -1,36 +1,51 @@
 <!-- --------------NAVBAR----------------- -->
     <nav>
         <div class="nav-content">
-        <div class="back-arrow back-arrow-nav">
-            <i class="fas fa-arrow-left"></i>
-        </div>
-        <div class="nav-logo">
-            <%= link_to root_path do %>
-            <img
-                id="logo"
-                src="https://res.cloudinary.com/dqstmox0s/image/upload/v1610446696/ukafqfyh8lvr248r0jbh1galg9ph.svg"
-                alt="logo"
-            />
-            
-            <% end %>
-            
-        </div>
-        <div class="nav-elements">
-            <ul class="nav-links">
-            <li><a href="#about" class="nav-link nav-font">About</a></li>
-            <li>
-                <a href="#portfolio" class="nav-link nav-font">Portfolio</a>
-            </li>
-            <li>
-                <a href="#contact" class="nav-link nav-font">Contact</a>
-            </li>
-            </ul>
-            <div class="burger-menu">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
+            <div class="back-arrow back-arrow-nav">
+                <i class="fas fa-arrow-left"></i>
             </div>
-        </div>
+            <div class="nav-logo">
+                <%= link_to root_path do %>
+                <img
+                    id="logo"
+                    src="https://res.cloudinary.com/dqstmox0s/image/upload/v1612256709/Restaurante%20website/Component_517_1_lpj9ag.svg"
+                    alt="logo"
+                />
+                
+                <% end %>
+                
+            </div>
+            <div class="nav-elements">
+                <div class="nav-responsive">
+                    <ul class="nav-links">
+                        <li>
+                            <a href="#about" class="nav-link nav-font">Restaurant</a></li>
+                        <li>
+                            <a href="#portfolio" class="nav-link nav-font">Carta</a>
+                        </li>
+                        <li>
+                            <a href="#contact" class="nav-link nav-font">Galería</a>
+                        </li>
+                        <li>
+                            <a href="#contact" class="nav-link nav-font">Contacto</a>
+                        </li>
+                    </ul>
+                    <div class="nav-sec-elements">
+                        <div class="nav-btn">
+                            <a href="#">Reservar</a>    
+                        </div>
+                        <div class="language-selector">
+                            <p>ES</p>
+                            <i class="fas fa-sort-down"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="burger-menu">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </div>
         </div>
     </nav>
 <!-- --------------NAVBAR----------------- -->

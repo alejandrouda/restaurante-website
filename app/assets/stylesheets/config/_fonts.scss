@@ -4,11 +4,11 @@
 $body-font: 'Open Sans', 'sans-serif';
 $headers-font: 'Lato', 'sans-serif';
 $navbar-font: 'Poppins', 'sans-serif';
-$btn-font: 'Open Sans', 'sans-serif';
+$btn-font: 'Roboto', 'sans-serif';
 
 $background-color: rgba(10, 25, 47, 0.85);
-$primary-color: #ff7b54;
-$secondary-color: rgb(186, 197, 225);
+$primary-color: #f2a753;
+$secondary-color: #ffc481;
 $third-color: rgb(63, 102, 193);
 
 $white: rgb(251, 251, 251);
@@ -16,7 +16,7 @@ $black: rgba(10, 25, 47, 0.85);
 
 .nav-font {
   font-family: $navbar-font;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 500;
   color: $black;
   margin-block-start: 0 !important;

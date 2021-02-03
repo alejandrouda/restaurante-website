@@ -91,7 +91,7 @@ nav {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   body {
     max-width: 100vw !important;
     overflow-x: hidden !important;
@@ -117,6 +117,7 @@ nav {
     padding: 0;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     background-color: rgb(10, 25, 47);
     align-items: center;
     width: 100vw !important;
@@ -140,6 +141,24 @@ nav {
     width: fit-content;
   }
 
+  .nav-links {
+    padding-inline-start: 0;
+    width: auto;
+    height: 70%;
+    text-align: center;
+  }
+
+  .nav-sec-elements {
+    flex-direction: column;
+    width: auto;
+    height: 30%;
+    justify-content: space-around;
+  }
+
+  .language-selector {
+    margin: 0 auto;
+  }
+
   .burger-menu {
     display: block;
   }
@@ -159,7 +178,7 @@ nav {
 
 @media (max-width: 524px) {
   nav {
-    padding: 10px;
+    padding: 10px 15px;
   }
 }
 

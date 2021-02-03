@@ -1,7 +1,19 @@
-<div class="main-container">
-    <div class="sec-container">
-        <%= link_to  'Sign in', new_user_session_path %>
-        <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+<div class="landing-background-image">
+    <div class="landing-background-filter">
+        <div class="main-container">
+            <div class="landing-container">
+                <%#= link_to  'Sign in', new_user_session_path %>
+                <%#= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+                <div class="landing-block">
+                    <div class="landing-block-logo">
+                        <img src="https://res.cloudinary.com/dqstmox0s/image/upload/v1612343064/Restaurante%20website/Component_513_1_d60mcx.svg" alt="Logo">
+                    </div>
+                    <div class="landing-block-btn">
+                        <a href="#">Reserva una mesa</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 

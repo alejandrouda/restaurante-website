@@ -10,7 +10,7 @@ nav {
   height: 80px;
   font-size: 14px;
   font-weight: 500;
-  padding: calc((80px - 53px) / 2) 40px;
+  padding: calc((80px - 44px) / 2) 40px;
   background-color: $white;
 }
 
@@ -107,6 +107,11 @@ nav {
     width: 100%;
     overflow-x: hidden !important;
   }
+
+  nav {
+    padding: calc((80px - 41px) / 2) 40px;
+  }
+
   .nav-responsive {
     position: absolute;
     right: 0px;
@@ -178,7 +183,9 @@ nav {
 
 @media (max-width: 524px) {
   nav {
-    padding: 10px 15px;
+    nav {
+      padding: calc((80px - 41px) / 2) 15px;
+    }
   }
 }
 

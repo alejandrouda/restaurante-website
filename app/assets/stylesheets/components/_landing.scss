@@ -1,13 +1,13 @@
 .landing-background-image {
   background-image: url('https://res.cloudinary.com/dqstmox0s/image/upload/v1612364623/Restaurante%20website/sam-balye-H5K1Zj-8oF0-unsplash_ay66f6.jpg');
   background-size: cover;
-  background-position-y: 20%;
-  height: calc(100vh - 80px);
+  background-position-y: 44%;
+  height: 100vh;
 }
 
 .landing-background-filter {
   background-color: rgba(0, 0, 0, 0.2);
-  height: calc(100vh - 80px);
+  height: 100vh;
 }
 
 .landing-container {
@@ -16,9 +16,29 @@
 
 .landing-block {
   text-align: center;
-  padding: calc((100vh / 2) - 120px) 0;
+  padding: calc((100vh / 2) - 60px) 0;
 }
 
 .landing-block-logo {
   margin-bottom: 50px;
+}
+
+.second-section-background {
+  background-image: url('https://res.cloudinary.com/dqstmox0s/image/upload/v1612365944/Restaurante%20website/Component_99_1_mancxb.jpg');
+  height: 548px;
+  padding-top: 60px;
+}
+
+.landing-card {
+  background-color: $white;
+  height: 360px;
+  width: 900px;
+  text-align: center;
+  padding: 60px 90px;
+  margin: 0 auto;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.landing-card-logo {
+  margin-bottom: 80px;
 }

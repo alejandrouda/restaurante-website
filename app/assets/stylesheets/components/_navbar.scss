@@ -1,9 +1,11 @@
 nav {
   height: 80px;
+  width: 100vw;
   font-size: 14px;
   font-weight: 500;
   padding: calc((80px - 44px) / 2) 40px;
   background-color: $white;
+  position: fixed;
 }
 
 .nav-content {

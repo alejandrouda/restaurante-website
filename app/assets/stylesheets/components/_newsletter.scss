@@ -1,0 +1,75 @@
+// NEWSLETTER
+
+.newsletter-section {
+  position: relative;
+  margin: 50px 0px 25px 0px;
+  width: 100%;
+  background-size: cover;
+  background-position: 40% 0%;
+}
+
+.newsletter--input {
+  padding: 10px 90px 14px 20px;
+  border: none;
+  border-radius: 30px;
+}
+
+.newsletter--input:focus,
+.newsletter--input:hover,
+.newsletter--input:active {
+  outline: none;
+}
+
+.newsletter-form-container {
+  margin-top: 30px;
+}
+@media (min-width: 512px) {
+  .newsletter-section {
+    background-image: url('https://res.cloudinary.com/dqstmox0s/image/upload/v1606834256/degustar/images/jez-timms-GhfkRvlXK8c-unsplash_gnwhbm.jpg');
+    height: 270px;
+  }
+
+  .newsletter-form {
+    position: absolute;
+    top: 75px;
+    right: 50px;
+  }
+
+  .newsletter-image-filter {
+    height: 270px;
+    background-color: rgba(255, 196, 129, 0.1);
+  }
+
+  .newsletter-title-mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 512px) {
+  .newsletter-section {
+    background-color: $orange;
+    padding: 30px 10px;
+  }
+
+  .newsletter-h-font {
+    color: $black;
+  }
+
+  .newsletter--input {
+    padding: 10px 50px 14px 20px;
+  }
+
+  .newsletter-title-web {
+    display: none;
+  }
+}
+@media (max-width: 413px) {
+  .btn-newsletter {
+    padding: 11px 12px;
+    margin-left: 5px;
+  }
+
+  .newsletter--input {
+    padding: 8px 12px 11px 12px;
+  }
+}

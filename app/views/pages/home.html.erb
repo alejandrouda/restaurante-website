@@ -19,31 +19,41 @@
     </div>
 </section>
 <section id="second-section">
-    <div class="second-section-background">
-        <div class="main-container">
-            <div class="sec-container">
-                <div class="landing-card">
-                    <div class="landing-card-logo">
-                        <img src="https://res.cloudinary.com/dqstmox0s/image/upload/v1612365944/Restaurante%20website/Component_163_1_lbtalh.svg" alt="logo">
-                    </div>
-                    <div class="landing-card-welcome">
-                        <p>
-                            Bienvenidos a nuestro restaurante. Trabajamos cada día ser referentes de la auténtica cocina japonesa, recuperando sus sabores y utilizando productos de temporada de alta calidad y una cuidada elaboración.
-                        </p>               
-                        <p>
-                            Esperamos que disfruten de una experiencia única, y puedan encontrarse con una cultura gastronómica milenaria.
-                        </p>
-                    </div>
-                    <div class="landing-card-signature">
-                        <p>
-                            Kei Koyabashi - Chef de Takumi
-                        </p>
-                    </div>
-                </div>
-            </div>
+    <%= render 'shared/welcome_card' %>
+</section>
+<section class="third-section">
+    <div class="first-part">
+        <div class="third-section-description">
+            <h2></h2>
+            <p></p>
+        </div>
+        <div class="third-section-image">
+            <img src="" alt="">
+        </div>
+    </div>    
+    <div class="second-part">
+        <div class="third-section-image">
+            <img src="" alt="">
+        </div>
+        <div class="third-section-description">
+            <h2></h2>
+            <p></p>
+        </div>
+    </div>    
+    <div class="third-part">
+        <div class="third-section-description">
+            <h2></h2>
+            <p></p>
+        </div>
+        <div class="third-section-image">
+            <img src="" alt="">
         </div>
     </div>
 </section>
-
-
-
+<section class="fourth-section">
+    <%= render 'shared/testimonial_card' %>
+</section>
+<section class="fifth-section">
+    <%= render 'shared/newsletter' %>
+    <%= render 'shared/footer' %>
+</section>

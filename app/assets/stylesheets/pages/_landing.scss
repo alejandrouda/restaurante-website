@@ -42,17 +42,16 @@
     }
   }
 
-  .landing-background-image {
-    background-size: 1250px;
-    background-position-y: 42%;
-    background-position-x: center;
-  }
+  // .landing-background-image {
+  //   background-size: 1250px;
+  //   background-position-y: 42%;
+  //   background-position-x: center;
+  // }
 }
 
 @media (max-width: 500px) {
   .second-section-background {
     background-image: url('https://res.cloudinary.com/dqstmox0s/image/upload/v1612365944/Restaurante%20website/Component_192_3_ohyoak.jpg');
-    height: calc(100vh - 80px);
     padding: 30px 0;
   }
 }

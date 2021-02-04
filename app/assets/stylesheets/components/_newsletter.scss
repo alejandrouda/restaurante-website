@@ -30,28 +30,27 @@
   font-family: $headers-font;
 }
 
-.newsletter-section {
-  background-image: url('https://res.cloudinary.com/dqstmox0s/image/upload/v1612441754/jason-leung-poI7DelFiVA-unsplash_me0il5.jpg');
-  height: 270px;
-  background-position-y: center;
-}
-
-.newsletter-form {
-  position: absolute;
-  top: 75px;
-  right: 50px;
-}
-
-.newsletter-image-filter {
-  height: 270px;
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
-.newsletter-title-mobile {
-  display: none;
-}
-
 @media (min-width: 512px) {
+  .newsletter-section {
+    background-image: url('https://res.cloudinary.com/dqstmox0s/image/upload/v1612441754/jason-leung-poI7DelFiVA-unsplash_me0il5.jpg');
+    height: 270px;
+    background-position-y: center;
+  }
+
+  .newsletter-form {
+    position: absolute;
+    top: 75px;
+    right: 50px;
+  }
+
+  .newsletter-image-filter {
+    height: 270px;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+
+  .newsletter-title-mobile {
+    display: none;
+  }
 }
 
 @media (max-width: 512px) {

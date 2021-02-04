@@ -6,6 +6,7 @@ nav {
   padding: calc((80px - 44px) / 2) 40px;
   background-color: $white;
   position: fixed;
+  z-index: 1000;
 }
 
 .nav-content {

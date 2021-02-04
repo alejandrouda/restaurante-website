@@ -42,3 +42,25 @@
 .landing-card-logo {
   margin-bottom: 80px;
 }
+
+@media (max-width: 652px) {
+  .landing-block-logo {
+    img {
+      height: 80px;
+    }
+  }
+
+  .landing-background-image {
+    background-size: 1250px;
+    background-position-y: 42%;
+    background-position-x: center;
+  }
+}
+
+@media (max-width: 400px) {
+  .landing-block-logo {
+    img {
+      height: 60px;
+    }
+  }
+}

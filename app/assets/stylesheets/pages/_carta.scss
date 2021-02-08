@@ -122,6 +122,14 @@
   }
 }
 
+.meal-allergens {
+  display: flex;
+}
+
+.meal-allergens-icon {
+  padding-right: 10px;
+}
+
 .meal-separator {
   border-bottom: solid 1px rgba(150, 150, 150, 0.25);
   margin: 14px 0;

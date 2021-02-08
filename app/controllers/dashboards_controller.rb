@@ -11,7 +11,6 @@ class DashboardsController < ApplicationController
   private
 
   def set_params
-    @current_restaurante = Restaurante.find(params[:restaurante_id])
     @current_dashboard = Dashboard.find(params[:id])
   end
 end

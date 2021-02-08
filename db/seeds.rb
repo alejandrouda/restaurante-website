@@ -87,7 +87,6 @@ carta= Menu.new(name:"Carta",
                 menu_type:"meal"
                 )
 
-carta.restaurante_id = digital_rest.id
 carta.save!
 p carta
 
@@ -95,7 +94,6 @@ bodega= Menu.new(name:"Bodega",
                 menu_type:"drink"
                 )
 
-bodega.restaurante_id = digital_rest.id
 bodega.save!
 p bodega
 
@@ -215,19 +213,19 @@ p "Meal category tags created!"
 
 p "Creating allergens..."
 
-shellfish = Allergen.new(
+shellfish_a = Allergen.new(
                          name: "shellfish",
-                         icon: "pending"
 )
-shellfish.save!
-p shellfish
+shellfish_a.icon.attach(io: URI.open('https://res.cloudinary.com/dqstmox0s/image/upload/v1612783355/Component_518_5_jk7djb.svg'), filename: 'Component_518_5_jk7djb.svg', content_type: 'svg')
+shellfish_a.save!
+p shellfish_a
 
-egg = Allergen.new(
-                         name: "egg",
-                         icon: "pending"
+fish_a = Allergen.new(
+                         name: "fish",
 )
-egg.save!
-p egg
+fish_a.icon.attach(io: URI.open('https://res.cloudinary.com/dqstmox0s/image/upload/v1612783355/Component_519_4_delp8f.svg'), filename: 'Component_519_4_delp8f.svg', content_type: 'svg')
+fish_a.save!
+p fish_a
 
 p "Allergens created!"
 
@@ -235,42 +233,42 @@ p "Creating allergen tags..."
 
 a_tag_1 = AllergenTag.new(
     meal_id: pasta.id,
-    allergen_id: egg.id
+    allergen_id: fish_a.id
 )
 a_tag_1.save!
 p a_tag_1
 
 a_tag_2 = AllergenTag.new(
     meal_id: fish.id,
-    allergen_id: shellfish.id
+    allergen_id: shellfish_a.id
 )
 a_tag_2.save!
 p a_tag_2
 
 a_tag_3 = AllergenTag.new(
     meal_id: fish.id,
-    allergen_id: egg.id
+    allergen_id: fish_a.id
 )
 a_tag_3.save!
 p a_tag_3
 
 a_tag_4 = AllergenTag.new(
     meal_id: meat.id,
-    allergen_id: egg.id
+    allergen_id: shellfish_a.id
 )
 a_tag_4.save!
 p a_tag_4
 
 a_tag_5 = AllergenTag.new(
     meal_id: meat.id,
-    allergen_id: shellfish.id
+    allergen_id: fish_a.id
 )
 a_tag_5.save!
 p a_tag_5
 
 a_tag_6 = AllergenTag.new(
     meal_id: caneloni.id,
-    allergen_id: egg.id
+    allergen_id: fish_a.id
 )
 a_tag_6.save!
 p a_tag_6

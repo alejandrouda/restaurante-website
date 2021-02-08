@@ -11,9 +11,7 @@
                     src="https://res.cloudinary.com/dqstmox0s/image/upload/v1612256709/Restaurante%20website/Component_517_1_lpj9ag.svg"
                     alt="logo"
                 />
-                
-                <% end %>
-                
+                <% end %>           
             </div>
             <div class="nav-elements">
                 <div class="nav-responsive">
@@ -21,7 +19,7 @@
                         <li>
                             <a href="#about" class="nav-link nav-font">Restaurant</a></li>
                         <li>
-                            <a href="#portfolio" class="nav-link nav-font">Carta</a>
+                            <%= link_to 'Carta', menus_path, class: "nav-link nav-font" %>
                         </li>
                         <li>
                             <a href="#contact" class="nav-link nav-font">Galería</a>

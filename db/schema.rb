@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_25_110815) do
+ActiveRecord::Schema.define(version: 2021_02_08_144243) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,7 +47,6 @@ ActiveRecord::Schema.define(version: 2021_01_25_110815) do
 
   create_table "allergens", force: :cascade do |t|
     t.string "name"
-    t.string "icon"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -150,12 +149,10 @@ ActiveRecord::Schema.define(version: 2021_01_25_110815) do
   create_table "menus", force: :cascade do |t|
     t.string "name"
     t.boolean "active", default: true
-    t.bigint "restaurante_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "menu_type"
     t.integer "position"
-    t.index ["restaurante_id"], name: "index_menus_on_restaurante_id"
   end
 
   create_table "restaurantes", force: :cascade do |t|
@@ -170,10 +167,8 @@ ActiveRecord::Schema.define(version: 2021_01_25_110815) do
     t.string "name"
     t.float "price"
     t.boolean "active", default: true
-    t.bigint "restaurante_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["restaurante_id"], name: "index_set_menus_on_restaurante_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -202,7 +197,5 @@ ActiveRecord::Schema.define(version: 2021_01_25_110815) do
   add_foreign_key "meal_category_tags", "meal_categories"
   add_foreign_key "meal_category_tags", "meals"
   add_foreign_key "meals", "menus"
-  add_foreign_key "menus", "restaurantes"
   add_foreign_key "restaurantes", "users"
-  add_foreign_key "set_menus", "restaurantes"
 end

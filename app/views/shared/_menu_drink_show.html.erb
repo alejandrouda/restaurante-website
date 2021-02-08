@@ -6,7 +6,7 @@
       </div>
       <% @current_drinks.each do |current_drink| %>
         <% if drink_category.id == current_drink.drink_category_tag&.drink_category_id %>
-          <%= link_to [@current_restaurante, @menu, current_drink] do %>
+          <%= link_to [@menu, current_drink] do %>
             <div class="meal-card-link-container">
               <p class="meal-card-link">
                   <%= current_drink.name %>

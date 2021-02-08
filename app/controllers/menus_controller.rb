@@ -4,12 +4,9 @@ class MenusController < ApplicationController
 
   def index
     @menus = Menu.all
-    @current_restaurante = Restaurante.find(params[:restaurante_id].to_i)
-    @restaurantes = Restaurante.all
   end
 
   def show
-    @current_restaurante = Restaurante.find(params[:restaurante_id].to_i)
     @meal_categories = MealCategory.all
     @drink_categories = DrinkCategory.all
     @filters = Filter.all

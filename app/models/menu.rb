@@ -1,5 +1,4 @@
 class Menu < ApplicationRecord
-  belongs_to :restaurante
 
   has_many :meals, dependent: :destroy
   has_many :drinks, dependent: :destroy

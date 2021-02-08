@@ -1,48 +1,42 @@
-<div class="main-container">
-  <div class="sec-container">
-    <div class="meal-index-content">
-      <div id="all">
-        <% @meal_categories.each do |meal_category| %>
-          <div id="<%=meal_category.name.downcase%>" class='category-selector'>
-            <div class="category">
-              <h3> <%= meal_category.name %></h3>
-            </div>
-            <div class="category-content">
-              <% @meal_glutenfree.each do |current_meal| %>
-              
-                <%# ------------------Assigning dinamic class to meals--------------------- %>
-                <% str = "" %>
-                <%str << 'all' if current_meal.filters == []%>
-                <% current_meal.filters&.each do |f| %>
-                 <%str << f&.filter_title%>
-                 <%str << ' ' if f != current_meal.filters.last%>
-                 <%str << ' all' if f == current_meal.filters.last%>
-                 
-                <%end %>
-
-                <% if meal_category.id == current_meal.meal_category_tag&.meal_category_id %>
-                <%# ----------- Pending to make modal, a tag is to keep filter working------------- %>
-                  <%#= link_to [@current_restaurante, @menu, current_meal] do %>
-                  <a href="#">
-                    <div class="<%=str%>" id=meal-card>
-                      <div class="meal-card-link-container">
-                        <p class="meal-card-link">
-                            <%= current_meal.name %>
-                            
-                        </p>
-                        <p class="meal-card-link">
-                            <%= current_meal.price %>   €
-                        </p>
-                      </div>
-                    </div>
-                  </a>
-                  <%# end %>
-                <% end %>
-              <% end %>
-            </div>
+<div id="all">
+  <% @meal_categories.each do |meal_category| %>
+    <div class="carta-show-container">
+      <div class="carta-show-title">
+        <div id="<%=meal_category.name.downcase%>" class='category-selector'>
+          <div class="category">
+            <h2> <%= meal_category.name %></h2>
           </div>
+        </div>                  
+        <div class="carta-show-title-decoration">
+        </div>
+      </div>
+      <div class="carta-show-meals">
+        <% @meal_glutenfree.each do |current_meal| %>
+           <% if meal_category.id == current_meal.meal_category_tag&.meal_category_id %>
+            <div class="carta-show-meal">
+              <div class="first-line">
+                  <div class="meal-title">
+                      <h5><%= current_meal.name %></h5>
+                  </div>
+                  <div class="meal-price">
+                      <h5><%= current_meal.price %></h5>
+                  </div>
+              </div>
+              <div class="second-line">
+                  <div class="meal-allergens">
+                      <% current_meal.allergens.each do |allergen| %>
+                        <div class="meal-allergens-icon">
+                          <%= image_tag(allergen.icon) %>
+                        </div>
+                      <% end %>
+                  </div>
+              </div>
+            </div>
+            <div class="meal-separator">
+            </div>
+           <% end %>
         <% end %>
       </div>
     </div>
-  </div>
+  <% end %>
 </div>

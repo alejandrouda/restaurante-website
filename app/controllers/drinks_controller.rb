@@ -50,16 +50,14 @@ class DrinksController < ApplicationController
   end
 
   def set_current_variable_params
-    @current_restaurante = Restaurante.find(params[:restaurante_id])
     @current_dashboard = Dashboard.find(params[:dashboard_id])
   end
 
   def set_index_params
-    @current_restaurante = Restaurante.find(params[:restaurante_id])
     @current_menu = Menu.find(params[:menu_id])
   end
 
   def dashboard_redirect
-    redirect_to restaurante_dashboard_path(@current_restaurante, @current_dashboard)
+    redirect_to restaurante_dashboard_path(@current_dashboard)
   end
 end

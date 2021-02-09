@@ -10,6 +10,7 @@ class MenusController < ApplicationController
   def show
     @meal_categories = MealCategory.all
     @drink_categories = DrinkCategory.all
+    @drink_all = Drink.where(menu_id: @menu.id)
     @filters = Filter.all
     @allergens = Allergen.all
     @meals = Meal.all

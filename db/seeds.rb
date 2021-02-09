@@ -116,113 +116,567 @@ p "Set menus created..."
 
 p "Creating meals..."
 
-pasta = Meal.new(name:"Pasta bolognesa",
-                 description:"Pasta bolognesa casera, especialidad de la casa",
+miso = Meal.new(name:"Sopa de miso",
+                 description:"Miso",
+                 price: 3.40
+                )
+
+miso.menu_id = carta.id
+miso.save!
+p miso
+
+edamame = Meal.new(name:"Edamame",
+                 description:"edamame",
+                 price: 5.80
+                )
+
+edamame.menu_id = carta.id
+edamame.save!
+p edamame
+
+crab_salad = Meal.new(name:"Ensalada de cangrejo",
+                 description:"",
+                 price: 6.40
+                )
+
+crab_salad.menu_id = carta.id
+crab_salad.save!
+p crab_salad
+
+wok_veg = Meal.new(name:"Wok de vegetales",
+                 description:"",
+                 price: 5.50
+                )
+
+wok_veg.menu_id = carta.id
+wok_veg.save!
+p wok_veg
+
+setas = Meal.new(name:"Setas teriyaki",
+                 description:"setas",
+                 price: 4.60
+                )
+
+setas.menu_id = carta.id
+setas.save!
+p setas
+
+nigiri_salmon = Meal.new(name:"Nigiri de salmón",
+                 description:"Nigiri de salmón",
                  price: 4
                 )
 
-pasta.menu_id = carta.id
-pasta.save!
-p pasta
+nigiri_salmon.menu_id = carta.id
+nigiri_salmon.save!
+p nigiri_salmon
 
-fish = Meal.new(name:"Salmon al horno",
-                 description:"Salmon al horno, cocinado a baja temperatura y con salsa de finas hiervas",
-                 price: 11.50
+nigiri_tuna = Meal.new(name:"Nigiri de atún",
+                 description:"Nigiri de atún",
+                 price: 6
                 )
 
-fish.menu_id = carta.id
-fish.save!
-p fish
+nigiri_tuna.menu_id = carta.id
+nigiri_tuna.save!
+p nigiri_tuna
 
-meat = Meal.new(name:"Solomillo de tenera",
+nigiri_shrimp = Meal.new(name:"Nigiri de langostino",
                  description:"Cocinado a la parrilla, servido con patatas y vegetales asados",
-                 price: 18.40
+                 price: 5.8
                 )
 
-meat.menu_id = carta.id
-meat.save!
-p meat
+nigiri_shrimp.menu_id = carta.id
+nigiri_shrimp.save!
+p nigiri_shrimp
 
-caneloni = Meal.new(name:"Canelones",
+nigiri_octopus = Meal.new(name:"Nigiri de pulpo",
                  description:"Canelones de espinaca y ricota, servidos con salsa trufada y bechamel",
-                 price: 9.40
+                 price: 6.40
                 )
 
-caneloni.menu_id = carta.id
-caneloni.save!
-p caneloni
+nigiri_octopus.menu_id = carta.id
+nigiri_octopus.save!
+p nigiri_octopus
 
-flan = Meal.new(name:"Flan",
-                 description:"Flan casero con crema y dulce de leche",
+nigiri_unagi = Meal.new(name:"Nigiri Unagi",
+                 description:"Nigiri unagi",
+                 price: 5.20
+                )
+
+nigiri_unagi.menu_id = carta.id
+nigiri_unagi.save!
+p nigiri_unagi
+
+nigiri_salmon_t = Meal.new(name:"Nigiri de salmón teriyaki",
+                 description:"Nigiri de salmón teriyaki",
+                 price: 5.60
+                )
+
+nigiri_salmon_t.menu_id = carta.id
+nigiri_salmon_t.save!
+p nigiri_salmon_t
+
+nigiri_artichoke_t = Meal.new(name:"Nigiri de alcachofa teriyaki",
+                 description:"Nigiri de alcachofa teriyaki",
+                 price: 5.60
+                )
+
+nigiri_artichoke_t.menu_id = carta.id
+nigiri_artichoke_t.save!
+p nigiri_artichoke_t
+
+sashimi_salmon = Meal.new(name:"Sashimi de salmón",
+                 description:"Sashimi de salmón",
+                 price: 5
+                )
+
+sashimi_salmon.menu_id = carta.id
+sashimi_salmon.save!
+p sashimi_salmon
+
+sashimi_tuna = Meal.new(name:"Sashimi de atún",
+                 description:"",
+                 price: 6.20
+                )
+
+sashimi_tuna.menu_id = carta.id
+sashimi_tuna.save!
+p sashimi_tuna
+
+sashimi_beetroot = Meal.new(name:"Sashimi de remolacha",
+                 description:"",
+                 price: 5.20
+                )
+
+sashimi_beetroot.menu_id = carta.id
+sashimi_beetroot.save!
+p sashimi_beetroot
+
+maki_salmon = Meal.new(name:"Makis de salmón",
+                 description:"",
+                 price: 5.50
+                )
+
+maki_salmon.menu_id = carta.id
+maki_salmon.save!
+p maki_salmon
+
+maki_cucumber = Meal.new(name:"Maki de pepino",
+                 description:"",
+                 price: 4.20
+                )
+
+maki_cucumber.menu_id = carta.id
+maki_cucumber.save!
+p maki_cucumber
+
+maki_tuna = Meal.new(name:"Maki de atún",
+                 description:"",
+                 price: 6
+                )
+
+maki_tuna.menu_id = carta.id
+maki_tuna.save!
+p maki_tuna
+
+maki_avocado = Meal.new(name:"Maki de aguacate con philadelphia",
+                 description:"",
                  price: 5.40
                 )
 
-flan.menu_id = carta.id
-flan.save!
-p flan
+maki_avocado.menu_id = carta.id
+maki_avocado.save!
+p maki_avocado
+
+maki_artichoke = Meal.new(name:"Maki artichoke teriyaki",
+                 description:"",
+                 price: 5.60
+                )
+
+maki_artichoke.menu_id = carta.id
+maki_artichoke.save!
+p maki_artichoke
+
+california = Meal.new(name:"California roll",
+                 description:"",
+                 price: 6.60
+                )
+
+california.menu_id = carta.id
+california.save!
+p california
+
+spicy_tuna = Meal.new(name:"Spicy tuna",
+                 description:"",
+                 price: 7.40
+                )
+
+spicy_tuna.menu_id = carta.id
+spicy_tuna.save!
+p spicy_tuna
+
+crab_roll = Meal.new(name:"Crab roll",
+                 description:"",
+                 price: 8.40
+                )
+
+crab_roll.menu_id = carta.id
+crab_roll.save!
+p crab_roll
+
+takumi_roll = Meal.new(name:"Takumi roll",
+                 description:"",
+                 price: 7.60
+                )
+
+takumi_roll.menu_id = carta.id
+takumi_roll.save!
+p takumi_roll
+
+shrimp_tempura = Meal.new(name:"Langostino tempura",
+                 description:"",
+                 price: 7.40
+                )
+
+shrimp_tempura.menu_id = carta.id
+shrimp_tempura.save!
+p shrimp_tempura
+
+california_tempura = Meal.new(name:"California tempura",
+                 description:"",
+                 price: 7.50
+                )
+
+california_tempura.menu_id = carta.id
+california_tempura.save!
+p california_tempura
+
+crab_tempura = Meal.new(name:"Crab tempura",
+                 description:"",
+                 price: 8.60
+                )
+
+crab_tempura.menu_id = carta.id
+crab_tempura.save!
+p crab_tempura
+
+artichoke_tempura = Meal.new(name:"Alcachofa tempura",
+                 description:"",
+                 price: 5.50
+                )
+
+artichoke_tempura.menu_id = carta.id
+artichoke_tempura.save!
+p artichoke_tempura
+
+takumi_tempura = Meal.new(name:"Takumi roll tempura",
+                 description:"",
+                 price: 7.40
+                )
+
+takumi_tempura.menu_id = carta.id
+takumi_tempura.save!
+p takumi_tempura
+
+green_tea_icecream = Meal.new(name:"Helado de té verde",
+                 description:"",
+                 price: 5.50
+                )
+
+green_tea_icecream.menu_id = carta.id
+green_tea_icecream.save!
+p green_tea_icecream
+
+truffle = Meal.new(name:"Trufas de sake",
+                 description:"",
+                 price: 6.40
+                )
+
+truffle.menu_id = carta.id
+truffle.save!
+p truffle
+
+lichee = Meal.new(name:"Lichee",
+                 description:"",
+                 price: 6.60
+                )
+
+lichee.menu_id = carta.id
+lichee.save!
+p lichee
+
+tempura_icecream = Meal.new(name:"Helado en tempura",
+                 description:"",
+                 price: 5.40
+                )
+
+tempura_icecream.menu_id = carta.id
+tempura_icecream.save!
+p tempura_icecream
+
+chocolate_roll = Meal.new(name:"Roll de chocolate",
+                 description:"Roll",
+                 price: 5.50
+                )
+
+chocolate_roll.menu_id = carta.id
+chocolate_roll.save!
+p chocolate_roll
 
 p "Meals created"
 
 p "Creating meal categories..."
 
-tapas= MealCategory.new(name:"Tapas",
-                        category_title: "tapas"
+starter= MealCategory.new(name:"Entrantes",
+                        category_title: "starters"
 )
-tapas.save!
-p tapas
+starter.save!
+p starter
 
-entrantes= MealCategory.new(name:"Entrantes",
-                            category_title: "entrantes"
+nigiri= MealCategory.new(name:"Nigiris",
+                            category_title: "nigiri"
 )
-entrantes.save!
-p entrantes
+nigiri.save!
+p nigiri
 
-principales= MealCategory.new(name:"Principales",
-                              category_title: "principales"
+sashimi= MealCategory.new(name:"Sashimi",
+                              category_title: "sashimi"
 )
-principales.save!
-p principales
+sashimi.save!
+p sashimi
 
-postres= MealCategory.new(name:"Postres",
-                          category_title: "postres"
+maki= MealCategory.new(name:"Maki",
+                          category_title: "maki"
 )
-postres.save!
-p postres
+maki.save!
+p maki
+
+special= MealCategory.new(name:"Especiales",
+                          category_title: "special"
+)
+special.save!
+p special
+
+tempura= MealCategory.new(name:"Tempura",
+                          category_title: "tempura"
+)
+tempura.save!
+p tempura
+
+dessert= MealCategory.new(name:"Postres",
+                          category_title: "dessert"
+)
+dessert.save!
+p dessert
 
 
 p "Meal categories created!"
 
 p "Creating meal category tags..."
 
-mc_tag_1 = MealCategoryTag.new(meal_id: pasta.id,
-                               meal_category_id: tapas.id                            
+mc_tag_1 = MealCategoryTag.new(meal_id: miso.id,
+                               meal_category_id: starter.id                            
 )
 mc_tag_1.save!
 p mc_tag_1
 
-mc_tag_2 = MealCategoryTag.new(meal_id: fish.id,
-                               meal_category_id: tapas.id                            
+mc_tag_2 = MealCategoryTag.new(meal_id: wok_veg.id,
+                               meal_category_id: starter.id                            
 )
 mc_tag_2.save!
 p mc_tag_2
 
-mc_tag_3 = MealCategoryTag.new(meal_id: meat.id,
-                               meal_category_id: principales.id                            
+mc_tag_3 = MealCategoryTag.new(meal_id: edamame.id,
+                               meal_category_id: starter.id                            
 )
 mc_tag_3.save!
 p mc_tag_3
 
-mc_tag_4 = MealCategoryTag.new(meal_id: caneloni.id,
-                               meal_category_id: entrantes.id                            
+mc_tag_4 = MealCategoryTag.new(meal_id: crab_salad.id,
+                               meal_category_id: starter.id                            
 )
 mc_tag_4.save!
 p mc_tag_4
 
-mc_tag_5 = MealCategoryTag.new(meal_id: flan.id,
-                               meal_category_id: postres.id                            
+mc_tag_5 = MealCategoryTag.new(meal_id: setas.id,
+                               meal_category_id: starter.id                            
 )
 mc_tag_5.save!
 p mc_tag_5
+
+
+mc_tag_6 = MealCategoryTag.new(meal_id: nigiri_tuna.id,
+                               meal_category_id: nigiri.id                            
+)
+mc_tag_6.save!
+p mc_tag_6
+
+mc_tag_7 = MealCategoryTag.new(meal_id: nigiri_shrimp.id,
+                               meal_category_id: nigiri.id                            
+)
+mc_tag_7.save!
+p mc_tag_7
+
+mc_tag_8 = MealCategoryTag.new(meal_id: nigiri_octopus.id,
+                               meal_category_id: nigiri.id                            
+)
+mc_tag_8.save!
+p mc_tag_8
+
+mc_tag_9 = MealCategoryTag.new(meal_id: nigiri_unagi.id,
+                               meal_category_id: nigiri.id                            
+)
+mc_tag_9.save!
+p mc_tag_9
+
+mc_tag_10 = MealCategoryTag.new(meal_id: nigiri_salmon_t.id,
+                               meal_category_id: nigiri.id                            
+)
+mc_tag_10.save!
+p mc_tag_10
+
+mc_tag_11 = MealCategoryTag.new(meal_id: nigiri_salmon.id,
+                               meal_category_id: nigiri.id                            
+)
+mc_tag_11.save!
+p mc_tag_11
+
+mc_tag_12 = MealCategoryTag.new(meal_id: nigiri_artichoke_t.id,
+                               meal_category_id: nigiri.id                            
+)
+mc_tag_12.save!
+p mc_tag_12
+
+mc_tag_13 = MealCategoryTag.new(meal_id: sashimi_salmon.id,
+                               meal_category_id: sashimi.id                            
+)
+mc_tag_13.save!
+p mc_tag_13
+
+mc_tag_14 = MealCategoryTag.new(meal_id: sashimi_tuna.id,
+                               meal_category_id: sashimi.id                            
+)
+mc_tag_14.save!
+p mc_tag_14
+
+mc_tag_15 = MealCategoryTag.new(meal_id: sashimi_beetroot.id,
+                               meal_category_id: sashimi.id                            
+)
+mc_tag_15.save!
+p mc_tag_15
+
+mc_tag_16 = MealCategoryTag.new(meal_id: maki_salmon.id,
+                               meal_category_id: maki.id                            
+)
+mc_tag_16.save!
+p mc_tag_16
+
+mc_tag_17 = MealCategoryTag.new(meal_id: maki_cucumber.id,
+                               meal_category_id: maki.id                            
+)
+mc_tag_17.save!
+p mc_tag_17
+
+mc_tag_18 = MealCategoryTag.new(meal_id: maki_tuna.id,
+                               meal_category_id: maki.id                            
+)
+mc_tag_18.save!
+p mc_tag_18
+
+mc_tag_19 = MealCategoryTag.new(meal_id: maki_avocado.id,
+                               meal_category_id: maki.id                            
+)
+mc_tag_19.save!
+p mc_tag_19
+
+mc_tag_20 = MealCategoryTag.new(meal_id: maki_artichoke.id,
+                               meal_category_id: maki.id                            
+)
+mc_tag_20.save!
+p mc_tag_20
+
+mc_tag_21 = MealCategoryTag.new(meal_id: california.id,
+                               meal_category_id: special.id                            
+)
+mc_tag_21.save!
+p mc_tag_21
+
+mc_tag_22 = MealCategoryTag.new(meal_id: spicy_tuna.id,
+                               meal_category_id: special.id                            
+)
+mc_tag_22.save!
+p mc_tag_22
+
+mc_tag_23 = MealCategoryTag.new(meal_id: crab_roll.id,
+                               meal_category_id: special.id                            
+)
+mc_tag_23.save!
+p mc_tag_23
+
+mc_tag_24 = MealCategoryTag.new(meal_id: takumi_roll.id,
+                               meal_category_id: special.id                            
+)
+mc_tag_24.save!
+p mc_tag_24
+
+mc_tag_25 = MealCategoryTag.new(meal_id: shrimp_tempura.id,
+                               meal_category_id: tempura.id                            
+)
+mc_tag_25.save!
+p mc_tag_25
+
+mc_tag_26 = MealCategoryTag.new(meal_id: california_tempura.id,
+                               meal_category_id: tempura.id                            
+)
+mc_tag_26.save!
+p mc_tag_26
+
+mc_tag_27 = MealCategoryTag.new(meal_id: crab_tempura.id,
+                               meal_category_id: tempura.id                            
+)
+mc_tag_27.save!
+p mc_tag_27
+
+mc_tag_28 = MealCategoryTag.new(meal_id: artichoke_tempura.id,
+                               meal_category_id: tempura.id                            
+)
+mc_tag_28.save!
+p mc_tag_28
+
+mc_tag_29 = MealCategoryTag.new(meal_id: takumi_tempura.id,
+                               meal_category_id: tempura.id                            
+)
+mc_tag_29.save!
+p mc_tag_29
+
+mc_tag_31 = MealCategoryTag.new(meal_id: green_tea_icecream.id,
+                               meal_category_id: dessert.id                            
+)
+mc_tag_31.save!
+p mc_tag_31
+
+mc_tag_32 = MealCategoryTag.new(meal_id: truffle.id,
+                               meal_category_id: dessert.id                            
+)
+mc_tag_32.save!
+p mc_tag_32
+
+mc_tag_33 = MealCategoryTag.new(meal_id: lichee.id,
+                               meal_category_id: dessert.id                            
+)
+mc_tag_33.save!
+p mc_tag_33
+
+mc_tag_34 = MealCategoryTag.new(meal_id: tempura_icecream.id,
+                               meal_category_id: dessert.id                            
+)
+mc_tag_34.save!
+p mc_tag_34
+
+mc_tag_35 = MealCategoryTag.new(meal_id: chocolate_roll.id,
+                               meal_category_id: dessert.id                            
+)
+mc_tag_35.save!
+p mc_tag_35
 
 p "Meal category tags created!"
 
@@ -242,47 +696,68 @@ fish_a.icon.attach(io: URI.open('https://res.cloudinary.com/dqstmox0s/image/uplo
 fish_a.save!
 p fish_a
 
+egg_a = Allergen.new(
+                         name: "egg",
+)
+egg_a.icon.attach(io: URI.open('https://res.cloudinary.com/dqstmox0s/image/upload/v1612867025/Component_214_1_rmzjac.svg'), filename: 'Component_214_1_rmzjac.svg', content_type: 'svg')
+egg_a.save!
+p egg_a
+
+crustaceans_a = Allergen.new(
+                         name: "crustaceans",
+)
+crustaceans_a.icon.attach(io: URI.open('https://res.cloudinary.com/dqstmox0s/image/upload/v1612866820/Component_216_1_bwqffi.svg'), filename: 'Component_216_1_bwqffi.svg', content_type: 'svg')
+crustaceans_a.save!
+p crustaceans_a
+
+wheat_a = Allergen.new(
+                         name: "wheat",
+)
+wheat_a.icon.attach(io: URI.open('https://res.cloudinary.com/dqstmox0s/image/upload/v1612866820/Component_215_1_ponvbd.svg'), filename: 'Component_215_1_ponvbd.svg', content_type: 'svg')
+wheat_a.save!
+p wheat_a
+
 p "Allergens created!"
 
 p "Creating allergen tags..."
 
 a_tag_1 = AllergenTag.new(
-    meal_id: pasta.id,
+    meal_id: nigiri_salmon.id,
     allergen_id: fish_a.id
 )
 a_tag_1.save!
 p a_tag_1
 
 a_tag_2 = AllergenTag.new(
-    meal_id: fish.id,
+    meal_id: crab_roll.id,
     allergen_id: shellfish_a.id
 )
 a_tag_2.save!
 p a_tag_2
 
 a_tag_3 = AllergenTag.new(
-    meal_id: fish.id,
+    meal_id: nigiri_tuna.id,
     allergen_id: fish_a.id
 )
 a_tag_3.save!
 p a_tag_3
 
 a_tag_4 = AllergenTag.new(
-    meal_id: meat.id,
+    meal_id: shrimp_tempura.id,
     allergen_id: shellfish_a.id
 )
 a_tag_4.save!
 p a_tag_4
 
 a_tag_5 = AllergenTag.new(
-    meal_id: meat.id,
+    meal_id: takumi_roll.id,
     allergen_id: fish_a.id
 )
 a_tag_5.save!
 p a_tag_5
 
 a_tag_6 = AllergenTag.new(
-    meal_id: caneloni.id,
+    meal_id: maki_tuna.id,
     allergen_id: fish_a.id
 )
 a_tag_6.save!
@@ -321,42 +796,42 @@ p 'Filters created!'
 p 'Creating filter tags...'
 
 f_tag_1 = FilterTag.new(
-    meal_id: pasta.id,
+    meal_id: sashimi_beetroot.id,
     filter_id: vegan.id
 )
 f_tag_1.save!
 p f_tag_1
 
 f_tag_2 = FilterTag.new(
-    meal_id: fish.id,
+    meal_id: maki_cucumber.id,
     filter_id: unlactosed.id
 )
 f_tag_2.save!
 p f_tag_2
 
 f_tag_3 = FilterTag.new(
-    meal_id: fish.id,
+    meal_id: maki_avocado.id,
     filter_id: gluten_free.id
 )
 f_tag_3.save!
 p a_tag_3
 
 f_tag_4 = FilterTag.new(
-    meal_id: meat.id,
+    meal_id: sashimi_salmon.id,
     filter_id: gluten_free.id
 )
 f_tag_4.save!
 p f_tag_4
 
 f_tag_5 = FilterTag.new(
-    meal_id: meat.id,
+    meal_id: sashimi_tuna.id,
     filter_id: unlactosed.id
 )
 f_tag_5.save!
 p f_tag_5
 
 f_tag_6 = FilterTag.new(
-    meal_id: caneloni.id,
+    meal_id: maki_avocado.id,
     filter_id: vegetarian.id
 )
 f_tag_6.save!

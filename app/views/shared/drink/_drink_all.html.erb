@@ -1,0 +1,31 @@
+<% @drink_categories.each do |drink_category| %>
+    <div class="carta-show-container">
+      <div class="carta-show-title">
+        <div id="<%=drink_category.name.downcase%>" class='category-selector'>
+          <div class="category">
+            <h2> <%= drink_category.name %></h2>
+          </div>
+        </div>                  
+        <div class="carta-show-title-decoration">
+        </div>
+      </div>
+      <div class="carta-show-meals">
+        <% @current_drinks.each do |current_drink| %>
+           <% if drink_category.id == current_drink.drink_category_tag&.drink_category_id %>
+            <div class="carta-show-meal">
+              <div class="first-line">
+                  <div class="meal-title">
+                      <h5><%= current_drink.name %></h5>
+                  </div>
+                  <div class="meal-price">
+                      <h5><%= current_drink.price %></h5>
+                  </div>
+              </div>
+            </div>
+            <div class="meal-separator">
+            </div>
+           <% end %>
+        <% end %>
+      </div>
+    </div>
+  <% end %>

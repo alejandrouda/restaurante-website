@@ -13,5 +13,5 @@ class Meal < ApplicationRecord
   has_many :meal_categories, through: :meal_category_tags
   has_many :orders, through: :order_products
 
-  validates :name, :price, :description, presence: true
+  validates :name, :price, presence: true
 end

@@ -6,22 +6,13 @@
         <div class="separator">
         </div>
         <div class="align-bread-crumbs">
-            <i class="fas fa-home home-icon"></i>
+            <%=    link_to(menus_path) do %>
+                <i class="fas fa-home home-icon"></i>
+            <% end %>
             <p>
                 <i class="fas fa-chevron-right arrow-icon"></i><i class="fas fa-chevron-right arrow-icon"></i>
             </p>
             <p class="current-nav">Carta</p>
         </div>
     </div>
-
-    <div class="food-filter">
-        <select name="meal_filters" id="meal_filters">
-            <option value="all" disabled selected>Filtros</option>
-            <option value="all">Todo</option>
-            <% @filters. each do |filter| %>
-            <option value="<%= filter.filter_title %>"><%= filter.name %></option>
-            <% end %>
-        </select>
-    </div>
-
 </div>

@@ -4,6 +4,10 @@
   height: fit-content;
 }
 
+.cartas-title {
+  margin-bottom: 50px;
+}
+
 .cartas {
   margin-top: 80px;
   padding-top: 60px;
@@ -16,8 +20,15 @@
 }
 
 .cartas-container {
-  margin-top: 80px;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  max-width: 1240px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.carta-container {
+  flex-basis: 100%;
 }
 
 .cartas-row {

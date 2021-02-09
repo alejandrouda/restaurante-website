@@ -1,9 +1,10 @@
 class MenusController < ApplicationController
-  skip_before_action :authenticate_user!
+  skip_before_action :authenticate_user!, only: [:index, :show]
   before_action :set_params, only: [:show]
 
   def index
     @menus = Menu.all
+    @set_menus = SetMenu.all
   end
 
   def show

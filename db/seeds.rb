@@ -59,23 +59,18 @@ p 'Users created!'
 
 p "Creating restaurantes..."
 
-digital_rest= Restaurante.new(name:"Digital rest")
-digital_rest.user_id = ale.id
-digital_rest.photo.attach(io: URI.open('https://res.cloudinary.com/dqstmox0s/image/upload/v1610445696/digital%20rest/Component_37_1_gomrsm.svg'), filename: 'Component_37_1_gomrsm.svg', content_type: 'svg')
-digital_rest.save!
-p digital_rest
+takumi= Restaurante.new(name:"Takumi")
+takumi.user_id = ale.id
+takumi.photo.attach(io: URI.open('https://res.cloudinary.com/dqstmox0s/image/upload/v1612256709/Restaurante%20website/Component_517_1_lpj9ag.svg'), filename: 'Component_517_1_lpj9ag.svg', content_type: 'svg')
+takumi.save!
+p takumi
 
-gioia= Restaurante.new(name:"Gioia")
-gioia.user_id = antonio.id
-gioia.photo.attach(io: URI.open('https://res.cloudinary.com/dqstmox0s/image/upload/v1610445696/digital%20rest/Component_37_1_gomrsm.svg'), filename: 'Component_37_1_gomrsm.svg', content_type: 'svg')
-gioia.save!
-p gioia
 
 p "Restaurantes created..."
 
 p "Creating restaurante dashboard..."
 
-    dashboard = Dashboard.new(restaurante_id: digital_rest.id)
+    dashboard = Dashboard.new(restaurante_id: takumi.id)
     dashboard.save!
     p dashboard
 
@@ -87,17 +82,37 @@ carta= Menu.new(name:"Carta",
                 menu_type:"meal"
                 )
 
+carta.image.attach(io: URI.open('https://res.cloudinary.com/dqstmox0s/image/upload/v1612449911/vinicius-benedit--1GEAA8q3wk-unsplash_wvfffv.jpg'), filename: 'vinicius-benedit--1GEAA8q3wk-unsplash_wvfffv.jpg', content_type: 'jpg')
 carta.save!
 p carta
 
-bodega= Menu.new(name:"Bodega",
+winery= Menu.new(name:"Bodega",
                 menu_type:"drink"
                 )
 
-bodega.save!
-p bodega
+winery.image.attach(io: URI.open('https://res.cloudinary.com/dqstmox0s/image/upload/v1612449912/jim-harris-zDlusnb3G3Q-unsplash_uxli6c.jpg'), filename: 'jim-harris-zDlusnb3G3Q-unsplash_uxli6c.jpg', content_type: 'jpg')
+winery.save!
+p winery
+
+drinks= Menu.new(name:"Bebidas",
+                menu_type:"drink"
+                )
+drinks.image.attach(io: URI.open('https://res.cloudinary.com/dqstmox0s/image/upload/v1612449910/te-tonic-1_f6vl8c.jpg'), filename: 'te-tonic-1_f6vl8c.jpg', content_type: 'jpg')
+drinks.save!
+p drinks
 
 p "Menus created..."
+
+p "Creating set menus..."
+
+executive_menu = SetMenu.new(name:"Menú del medio día",
+                             price: "12.50"
+                            )
+executive_menu.image.attach(io: URI.open('https://res.cloudinary.com/dqstmox0s/image/upload/v1612449912/mahmoud-fawzy-MNbOMvT1cUU-unsplash_qzhjuw.jpg'), filename: 'mahmoud-fawzy-MNbOMvT1cUU-unsplash_qzhjuw.jpg', content_type: 'jpg')
+executive_menu.save!
+p executive_menu
+
+p "Set menus created..."
 
 p "Creating meals..."
 
@@ -216,14 +231,14 @@ p "Creating allergens..."
 shellfish_a = Allergen.new(
                          name: "shellfish",
 )
-shellfish_a.icon.attach(io: URI.open('https://res.cloudinary.com/dqstmox0s/image/upload/v1612783355/Component_518_5_jk7djb.svg'), filename: 'Component_518_5_jk7djb.svg', content_type: 'svg')
+shellfish_a.icon.attach(io: URI.open('https://res.cloudinary.com/dqstmox0s/image/upload/v1612818976/y4bkqhofj386u6r3o5y7efzc6r66.svg'), filename: 'y4bkqhofj386u6r3o5y7efzc6r66.svg', content_type: 'svg')
 shellfish_a.save!
 p shellfish_a
 
 fish_a = Allergen.new(
                          name: "fish",
 )
-fish_a.icon.attach(io: URI.open('https://res.cloudinary.com/dqstmox0s/image/upload/v1612783355/Component_519_4_delp8f.svg'), filename: 'Component_519_4_delp8f.svg', content_type: 'svg')
+fish_a.icon.attach(io: URI.open('https://res.cloudinary.com/dqstmox0s/image/upload/v1612818980/gfs6g9gnw0wezxinh22401u3t213.svg'), filename: 'gfs6g9gnw0wezxinh22401u3t213.svg', content_type: 'svg')
 fish_a.save!
 p fish_a
 
@@ -356,7 +371,7 @@ p "Creating drinks..."
                     price: 22.60
                     )
 
-    rutini.menu_id = bodega.id
+    rutini.menu_id = winery.id
     rutini.save!
     p rutini
 
@@ -365,7 +380,7 @@ p "Creating drinks..."
                     price: 14.50
                     )
 
-    cava.menu_id = bodega.id
+    cava.menu_id = winery.id
     cava.save!
     p cava
 
@@ -374,7 +389,7 @@ p "Creating drinks..."
                     price: 21.40
                     )
 
-    durthe.menu_id = bodega.id
+    durthe.menu_id = winery.id
     durthe.save!
     p durthe
 
@@ -383,7 +398,7 @@ p "Creating drinks..."
                     price: 19.40
                     )
 
-    rose.menu_id = bodega.id
+    rose.menu_id = winery.id
     rose.save!
     p rose
 
@@ -409,10 +424,10 @@ rose_wine= DrinkCategory.new(name:"Vino rosado",
 rose_wine.save!
 p rose_wine
 
-sparklin_wine= DrinkCategory.new(name:"Cava",
+sparkling_wine= DrinkCategory.new(name:"Cava",
                                  category_title: "cava")
-sparklin_wine.save!
-p sparklin_wine
+sparkling_wine.save!
+p sparkling_wine
 
 p "Drink categories created!"
 
@@ -437,7 +452,7 @@ dc_tag_3.save!
 p dc_tag_3
 
 dc_tag_4 = DrinkCategoryTag.new(drink_id: cava.id,
-                                drink_category_id: sparklin_wine.id                            
+                                drink_category_id: sparkling_wine.id                            
 )
 dc_tag_4.save!
 p dc_tag_4

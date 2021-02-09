@@ -1,11 +1,33 @@
-<div class="main-container">
-  <div class="sec-container">
-    <% Menu.all.each do |menu|%>
-      <%=    link_to [menu] do %>
-        <div class="card-link-container">
-          <p class="card-link"><%= menu.name %></p>
+<div class="cartas-background">
+    <div class="main-container">
+        <div class="sec-container">
+            <section class="cartas">
+                <div class="cartas-title">
+                    <h2>Nuestras cartas</h2>
+                </div>
+                <div class="cartas-container">
+                  <% @set_menus.each do |menu|%>
+                    <div class="carta-container">
+                      <%=    link_to [menu] do %>
+                        <%= image_tag(menu.image) %>
+                        <div class="carta-name">
+                          <h4><%= menu.name %></h4>
+                        </div>
+                      <% end %>
+                    </div>
+                  <% end %>
+                  <% @menus.each do |menu|%>
+                    <div class="carta-container">
+                      <%=    link_to [menu] do %>
+                        <%= image_tag(menu.image) %>
+                        <div class="carta-name">
+                          <h4><%= menu.name %></h4>
+                        </div>
+                      <% end %>
+                    </div>
+                  <% end %>
+                </div>
+            </section>
         </div>
-      <% end %>
-    <% end %>
-  </div>
+    </div>
 </div>

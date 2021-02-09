@@ -745,7 +745,7 @@ p a_tag_1
 
 a_tag_111 = AllergenTag.new(
     meal_id: tataki.id,
-    allergen_id: fish.id
+    allergen_id: fish_a.id
 )
 a_tag_111.save!
 p a_tag_111

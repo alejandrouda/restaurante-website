@@ -1482,7 +1482,34 @@ p "Creating drinks..."
     rutini.save!
     p rutini
 
-    cava = Drink.new(name:"Cava",
+    durthe_red = Drink.new(name:"Durthe Bourdeaux",
+                    description:"Malbec argentino, de acidez moderada y cuerpo completo",
+                    price: 20.50
+                    )
+
+    durthe_red.menu_id = winery.id
+    durthe_red.save!
+    p durthe_red
+
+    hacienda = Drink.new(name:"Hacienda Monasterio",
+                    description:"Malbec argentino, de acidez moderada y cuerpo completo",
+                    price: 32.90
+                    )
+
+    hacienda.menu_id = winery.id
+    hacienda.save!
+    p hacienda
+
+    trumpeter = Drink.new(name:"Trumpeter malbec",
+                    description:"Malbec argentino, de acidez moderada y cuerpo completo",
+                    price: 31.60
+                    )
+
+    trumpeter.menu_id = winery.id
+    trumpeter.save!
+    p trumpeter
+
+    cava = Drink.new(name:"Rovellans brut nature",
                     description:"Cava catalan, fresco y de dulzor ligero",
                     price: 14.50
                     )
@@ -1491,23 +1518,104 @@ p "Creating drinks..."
     cava.save!
     p cava
 
+    rovellans = Drink.new(name:"Rovellans brut",
+                    description:"Cava catalan, fresco y de dulzor ligero",
+                    price: 13.50
+                    )
+
+    rovellans.menu_id = winery.id
+    rovellans.save!
+    p rovellans
+
+    rovellans_r = Drink.new(name:"Rovellans reserva",
+                    description:"Cava catalan, fresco y de dulzor ligero",
+                    price: 14.50
+                    )
+
+    rovellans_r.menu_id = winery.id
+    rovellans_r.save!
+    p rovellans_r
+
+    rovellans_rose = Drink.new(name:"Rovellans rosé",
+    description:"Cava catalan, fresco y de dulzor ligero",
+    price: 18.50
+    )
+
+rovellans_rose.menu_id = winery.id
+rovellans_rose.save!
+p rovellans_rose
+
     durthe = Drink.new(name:"Durthe suavignon blanc",
                     description:"Refrescante suavignon blanc proveniente de Bordeaux",
-                    price: 21.40
+                    price: 19.40
                     )
 
     durthe.menu_id = winery.id
     durthe.save!
     p durthe
 
-    rose = Drink.new(name:"Rutini rose",
+    libalis = Drink.new(name:"Libalis",
+                    description:"Refrescante suavignon blanc proveniente de Bordeaux",
+                    price: 21.40
+                    )
+
+    libalis.menu_id = winery.id
+    libalis.save!
+    p libalis
+
+    rutini_sb = Drink.new(name:"Rutini suavignon blanc",
+                    description:"Refrescante suavignon blanc proveniente de Bordeaux",
+                    price: 22.60
+                    )
+
+    rutini_sb.menu_id = winery.id
+    rutini_sb.save!
+    p rutini_sb
+
+    zapata = Drink.new(name:"Catena Zapata Chardonnay",
+                    description:"Refrescante suavignon blanc proveniente de Bordeaux",
+                    price: 27.60
+                    )
+
+    zapata.menu_id = winery.id
+    zapata.save!
+    p zapata
+
+    emilia = Drink.new(name:"Emilia blanc-sec",
+                    description:"Refrescante suavignon blanc proveniente de Bordeaux",
+                    price: 18.40
+                    )
+
+    emilia.menu_id = winery.id
+    emilia.save!
+    p emilia
+
+    rose = Drink.new(name:"Rutini rosé",
                     description:"Merlot rose argentino, perfecto para el aperitivo",
-                    price: 19.40
+                    price: 19
                     )
 
     rose.menu_id = winery.id
     rose.save!
     p rose
+
+    el_arbol = Drink.new(name:"El árbol",
+                    description:"Merlot rose argentino, perfecto para el aperitivo",
+                    price: 22.50
+                    )
+
+    el_arbol.menu_id = winery.id
+    el_arbol.save!
+    p el_arbol
+
+    el_coto = Drink.new(name:"Coto rosé",
+                    description:"Merlot rose argentino, perfecto para el aperitivo",
+                    price: 17.60
+                    )
+
+    el_coto.menu_id = winery.id
+    el_coto.save!
+    p el_coto
 
 p "Drinks created!"
 
@@ -1546,23 +1654,94 @@ dc_tag_1 = DrinkCategoryTag.new(drink_id: rutini.id,
 dc_tag_1.save!
 p dc_tag_1
 
-dc_tag_2 = DrinkCategoryTag.new(drink_id: durthe.id,
-                                drink_category_id: white_wine.id                            
+dc_tag_2 = DrinkCategoryTag.new(drink_id: durthe_red.id,
+                                drink_category_id: red_wine.id                            
 )
 dc_tag_2.save!
 p dc_tag_2
 
-dc_tag_3 = DrinkCategoryTag.new(drink_id: rose.id,
-                                drink_category_id: rose_wine.id                            
+dc_tag_3 = DrinkCategoryTag.new(drink_id: hacienda.id,
+                                drink_category_id: red_wine.id                            
 )
 dc_tag_3.save!
 p dc_tag_3
 
-dc_tag_4 = DrinkCategoryTag.new(drink_id: cava.id,
-                                drink_category_id: sparkling_wine.id                            
+dc_tag_4 = DrinkCategoryTag.new(drink_id: trumpeter.id,
+                                drink_category_id: red_wine.id                            
 )
 dc_tag_4.save!
 p dc_tag_4
+
+dc_tag_5 = DrinkCategoryTag.new(drink_id: cava.id,
+                                drink_category_id: sparkling_wine.id                            
+)
+dc_tag_5.save!
+p dc_tag_5
+
+dc_tag_6 = DrinkCategoryTag.new(drink_id: rovellans.id,
+                                drink_category_id: sparkling_wine.id                            
+)
+dc_tag_6.save!
+p dc_tag_6
+
+dc_tag_7 = DrinkCategoryTag.new(drink_id: rovellans_r.id,
+                                drink_category_id: sparkling_wine.id                            
+)
+dc_tag_7.save!
+p dc_tag_7
+
+dc_tag_8 = DrinkCategoryTag.new(drink_id: rovellans_rose.id,
+                                drink_category_id: sparkling_wine.id                            
+)
+dc_tag_8.save!
+p dc_tag_8
+
+dc_tag_9 = DrinkCategoryTag.new(drink_id: durthe.id,
+                                drink_category_id: white_wine.id                            
+)
+dc_tag_9.save!
+p dc_tag_9
+
+dc_tag_10 = DrinkCategoryTag.new(drink_id: libalis.id,
+                                drink_category_id: white_wine.id                            
+)
+dc_tag_10.save!
+p dc_tag_10
+
+dc_tag_11 = DrinkCategoryTag.new(drink_id: rutini_sb.id,
+                                drink_category_id: white_wine.id                            
+)
+dc_tag_11.save!
+p dc_tag_11
+
+dc_tag_12 = DrinkCategoryTag.new(drink_id: zapata.id,
+                                drink_category_id: white_wine.id                            
+)
+dc_tag_12.save!
+p dc_tag_12
+
+dc_tag_13 = DrinkCategoryTag.new(drink_id: emilia.id,
+                                drink_category_id: white_wine.id                            
+)
+dc_tag_13.save!
+p dc_tag_13
+
+dc_tag_14 = DrinkCategoryTag.new(drink_id: rose.id,
+                                drink_category_id: rose_wine.id                            
+)
+dc_tag_14.save!
+p dc_tag_14
+
+dc_tag_15 = DrinkCategoryTag.new(drink_id: el_arbol.id,
+                                drink_category_id: rose_wine.id                            
+)
+dc_tag_15.save!
+p dc_tag_15
+
+dc_tag_16 = DrinkCategoryTag.new(drink_id: el_coto.id,
+                                drink_category_id: rose_wine.id                            
+)
+
 
 p "Drink category tags created!"
 

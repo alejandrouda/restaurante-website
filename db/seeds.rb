@@ -1038,57 +1038,436 @@ unlactosed= Filter.new(name:"Sin lactosa",
 unlactosed.save!
 p unlactosed
 
-gluten_free= Filter.new(name:"Sin gluten",
+glutenfree= Filter.new(name:"Sin gluten",
                         filter_title: "glutenfree"
                        )
-gluten_free.save!
-p gluten_free
+glutenfree.save!
+p glutenfree
 
 p 'Filters created!'
 
 p 'Creating filter tags...'
 
 f_tag_1 = FilterTag.new(
-    meal_id: sashimi_beetroot.id,
+    meal_id: miso.id,
     filter_id: vegan.id
 )
 f_tag_1.save!
 p f_tag_1
 
 f_tag_2 = FilterTag.new(
-    meal_id: maki_cucumber.id,
-    filter_id: unlactosed.id
+    meal_id: miso.id,
+    filter_id: vegetarian.id
 )
 f_tag_2.save!
 p f_tag_2
 
 f_tag_3 = FilterTag.new(
-    meal_id: maki_avocado.id,
-    filter_id: gluten_free.id
+    meal_id: miso.id,
+    filter_id: unlactosed.id
 )
 f_tag_3.save!
 p a_tag_3
 
 f_tag_4 = FilterTag.new(
-    meal_id: sashimi_salmon.id,
-    filter_id: gluten_free.id
+    meal_id: miso.id,
+    filter_id: glutenfree.id
 )
 f_tag_4.save!
 p f_tag_4
 
 f_tag_5 = FilterTag.new(
-    meal_id: sashimi_tuna.id,
+    meal_id: tataki.id,
     filter_id: unlactosed.id
 )
 f_tag_5.save!
 p f_tag_5
 
 f_tag_6 = FilterTag.new(
-    meal_id: maki_avocado.id,
-    filter_id: vegetarian.id
+    meal_id: tataki.id,
+    filter_id: glutenfree.id
 )
 f_tag_6.save!
 p f_tag_6
+
+f_tag_7 = FilterTag.new(
+    meal_id: edamame.id,
+    filter_id: vegan.id
+)
+f_tag_7.save!
+p f_tag_7
+
+f_tag_8 = FilterTag.new(
+    meal_id: edamame.id,
+    filter_id: vegetarian.id
+)
+f_tag_8.save!
+p f_tag_8
+
+f_tag_9 = FilterTag.new(
+    meal_id: edamame.id,
+    filter_id: unlactosed.id
+)
+f_tag_9.save!
+p f_tag_9
+
+f_tag_10 = FilterTag.new(
+    meal_id: edamame.id,
+    filter_id: glutenfree.id
+)
+f_tag_10.save!
+p f_tag_10
+
+f_tag_11 = FilterTag.new(
+    meal_id: crab_salad.id,
+    filter_id: unlactosed.id
+)
+f_tag_11.save!
+p f_tag_11
+
+f_tag_12 = FilterTag.new(
+    meal_id: wok_veg.id,
+    filter_id: vegan.id
+)
+f_tag_12.save!
+p f_tag_12
+
+f_tag_13 = FilterTag.new(
+    meal_id: wok_veg.id,
+    filter_id: vegetarian.id
+)
+f_tag_13.save!
+p f_tag_13
+
+f_tag_14 = FilterTag.new(
+    meal_id: wok_veg.id,
+    filter_id: glutenfree.id
+)
+f_tag_14.save!
+p f_tag_14
+
+f_tag_15 = FilterTag.new(
+    meal_id: wok_veg.id,
+    filter_id: unlactosed.id
+)
+f_tag_15.save!
+p f_tag_15
+
+f_tag_16 = FilterTag.new(
+    meal_id: nigiri_salmon.id,
+    filter_id: unlactosed.id
+)
+f_tag_16.save!
+p f_tag_16
+
+f_tag_17 = FilterTag.new(
+    meal_id: nigiri_salmon.id,
+    filter_id: glutenfree.id
+)
+f_tag_17.save!
+p f_tag_17
+
+f_tag_18 = FilterTag.new(
+    meal_id: nigiri_tuna.id,
+    filter_id: unlactosed.id
+)
+f_tag_18.save!
+p f_tag_18
+
+f_tag_19 = FilterTag.new(
+    meal_id: nigiri_tuna.id,
+    filter_id: glutenfree.id
+)
+f_tag_19.save!
+p f_tag_19
+
+f_tag_20 = FilterTag.new(
+    meal_id: nigiri_shrimp.id,
+    filter_id: unlactosed.id
+)
+f_tag_20.save!
+p f_tag_20
+
+f_tag_21 = FilterTag.new(
+    meal_id: nigiri_shrimp.id,
+    filter_id: glutenfree.id
+)
+f_tag_21.save!
+p f_tag_21
+
+f_tag_22 = FilterTag.new(
+    meal_id: nigiri_octopus.id,
+    filter_id: unlactosed.id
+)
+f_tag_22.save!
+p f_tag_22
+
+f_tag_23 = FilterTag.new(
+    meal_id: nigiri_octopus.id,
+    filter_id: glutenfree.id
+)
+f_tag_23.save!
+p f_tag_23
+
+f_tag_24 = FilterTag.new(
+    meal_id: nigiri_unagi.id,
+    filter_id: unlactosed.id
+)
+f_tag_24.save!
+p f_tag_24
+
+f_tag_25 = FilterTag.new(
+    meal_id: nigiri_unagi.id,
+    filter_id: glutenfree.id
+)
+f_tag_25.save!
+p f_tag_25
+
+f_tag_26 = FilterTag.new(
+    meal_id: nigiri_salmon_t.id,
+    filter_id: unlactosed.id
+)
+f_tag_26.save!
+p f_tag_26
+
+f_tag_27 = FilterTag.new(
+    meal_id: nigiri_artichoke_t.id,
+    filter_id: unlactosed.id
+)
+f_tag_27.save!
+p f_tag_27
+
+f_tag_28 = FilterTag.new(
+    meal_id: sashimi_salmon.id,
+    filter_id: unlactosed.id
+)
+f_tag_28.save!
+p f_tag_28
+
+f_tag_29 = FilterTag.new(
+    meal_id: sashimi_salmon.id,
+    filter_id: glutenfree.id
+)
+f_tag_29.save!
+p f_tag_29
+
+f_tag_30 = FilterTag.new(
+    meal_id: sashimi_tuna.id,
+    filter_id: unlactosed.id
+)
+f_tag_30.save!
+p f_tag_30
+
+f_tag_31 = FilterTag.new(
+    meal_id: sashimi_tuna.id,
+    filter_id: glutenfree.id
+)
+f_tag_31.save!
+p f_tag_31
+
+f_tag_32 = FilterTag.new(
+    meal_id: sashimi_beetroot.id,
+    filter_id: vegan.id
+)
+f_tag_32.save!
+p f_tag_32
+
+f_tag_33 = FilterTag.new(
+    meal_id: sashimi_beetroot.id,
+    filter_id: vegetarian.id
+)
+f_tag_33.save!
+p f_tag_33
+
+f_tag_34 = FilterTag.new(
+    meal_id: sashimi_beetroot.id,
+    filter_id: glutenfree.id
+)
+f_tag_34.save!
+p f_tag_34
+
+f_tag_35 = FilterTag.new(
+    meal_id: sashimi_beetroot.id,
+    filter_id: unlactosed.id
+)
+f_tag_35.save!
+p f_tag_35
+
+f_tag_36 = FilterTag.new(
+    meal_id: maki_salmon.id,
+    filter_id: glutenfree.id
+)
+f_tag_36.save!
+p f_tag_36
+
+f_tag_37 = FilterTag.new(
+    meal_id: maki_cucumber.id,
+    filter_id: vegetarian.id
+)
+f_tag_37.save!
+p f_tag_37
+
+f_tag_38 = FilterTag.new(
+    meal_id: maki_cucumber.id,
+    filter_id: glutenfree.id
+)
+f_tag_38.save!
+p f_tag_38
+
+f_tag_39 = FilterTag.new(
+    meal_id: maki_tuna.id,
+    filter_id: glutenfree.id
+)
+f_tag_39.save!
+p f_tag_39
+
+f_tag_40 = FilterTag.new(
+    meal_id: maki_avocado.id,
+    filter_id: vegetarian.id
+)
+f_tag_40.save!
+p f_tag_40
+
+f_tag_41 = FilterTag.new(
+    meal_id: maki_avocado.id,
+    filter_id: glutenfree.id
+)
+f_tag_41.save!
+p f_tag_41
+
+f_tag_42 = FilterTag.new(
+    meal_id: maki_artichoke.id,
+    filter_id: vegan.id
+)
+f_tag_42.save!
+p f_tag_42
+
+f_tag_43 = FilterTag.new(
+    meal_id: maki_artichoke.id,
+    filter_id: vegetarian.id
+)
+f_tag_43.save!
+p f_tag_43
+
+f_tag_44 = FilterTag.new(
+    meal_id: maki_artichoke.id,
+    filter_id: glutenfree.id
+)
+f_tag_44.save!
+p f_tag_44
+
+f_tag_45 = FilterTag.new(
+    meal_id: maki_artichoke.id,
+    filter_id: unlactosed.id
+)
+f_tag_45.save!
+p f_tag_45
+
+f_tag_46 = FilterTag.new(
+    meal_id: california.id,
+    filter_id: glutenfree.id
+)
+f_tag_46.save!
+p f_tag_46
+
+f_tag_47 = FilterTag.new(
+    meal_id: crab_roll.id,
+    filter_id: glutenfree.id
+)
+f_tag_47.save!
+p f_tag_47
+
+f_tag_48 = FilterTag.new(
+    meal_id: takumi_roll.id,
+    filter_id: glutenfree.id
+)
+f_tag_48.save!
+p f_tag_48
+
+f_tag_49 = FilterTag.new(
+    meal_id: artichoke_tempura.id,
+    filter_id: vegetarian.id
+)
+f_tag_49.save!
+p f_tag_49
+
+f_tag_50 = FilterTag.new(
+    meal_id: green_tea_icecream.id,
+    filter_id: vegetarian.id
+)
+f_tag_50.save!
+p f_tag_50
+
+f_tag_51 = FilterTag.new(
+    meal_id: truffle.id,
+    filter_id: vegetarian.id
+)
+f_tag_51.save!
+p f_tag_51
+
+f_tag_52 = FilterTag.new(
+    meal_id: truffle.id,
+    filter_id: unlactosed.id
+)
+f_tag_52.save!
+p f_tag_52
+
+f_tag_53 = FilterTag.new(
+    meal_id: truffle.id,
+    filter_id: glutenfree.id
+)
+f_tag_53.save!
+p f_tag_53
+
+f_tag_54 = FilterTag.new(
+    meal_id: lichee.id,
+    filter_id: vegan.id
+)
+f_tag_54.save!
+p f_tag_54
+
+f_tag_55 = FilterTag.new(
+    meal_id: lichee.id,
+    filter_id: vegetarian.id
+)
+f_tag_55.save!
+p f_tag_55
+
+f_tag_56 = FilterTag.new(
+    meal_id: lichee.id,
+    filter_id: glutenfree.id
+)
+f_tag_56.save!
+p f_tag_56
+
+f_tag_57 = FilterTag.new(
+    meal_id: lichee.id,
+    filter_id: unlactosed.id
+)
+f_tag_57.save!
+p f_tag_57
+
+f_tag_58 = FilterTag.new(
+    meal_id: chocolate_roll.id,
+    filter_id: vegetarian.id
+)
+f_tag_58.save!
+p f_tag_58
+
+f_tag_59 = FilterTag.new(
+    meal_id: chocolate_roll.id,
+    filter_id: vegan.id
+)
+f_tag_59.save!
+p f_tag_59
+
+f_tag_60 = FilterTag.new(
+    meal_id: chocolate_roll.id,
+    filter_id: unlactosed.id
+)
+f_tag_60.save!
+p f_tag_60
+
 
 p 'Filter tags created!'
 

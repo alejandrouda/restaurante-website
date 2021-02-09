@@ -287,7 +287,7 @@ maki_tuna.menu_id = carta.id
 maki_tuna.save!
 p maki_tuna
 
-maki_avocado = Meal.new(name:"Maki de aguacate con philadelphia",
+maki_avocado = Meal.new(name:"Maki de aguacate",
                  description:"",
                  price: 5.40
                 )
@@ -296,7 +296,7 @@ maki_avocado.menu_id = carta.id
 maki_avocado.save!
 p maki_avocado
 
-maki_artichoke = Meal.new(name:"Maki artichoke teriyaki",
+maki_artichoke = Meal.new(name:"Maki de alcachofa",
                  description:"",
                  price: 5.60
                 )

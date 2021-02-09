@@ -125,6 +125,15 @@ miso.menu_id = carta.id
 miso.save!
 p miso
 
+tataki = Meal.new(name:"Tataki de atún",
+                 description:"Tataki",
+                 price: 9.40
+                )
+
+tataki.menu_id = carta.id
+tataki.save!
+p tataki
+
 edamame = Meal.new(name:"Edamame",
                  description:"edamame",
                  price: 5.80
@@ -485,6 +494,12 @@ mc_tag_2 = MealCategoryTag.new(meal_id: wok_veg.id,
 mc_tag_2.save!
 p mc_tag_2
 
+mc_tag_222 = MealCategoryTag.new(meal_id: tataki.id,
+                               meal_category_id: starter.id                            
+)
+mc_tag_222.save!
+p mc_tag_222
+
 mc_tag_3 = MealCategoryTag.new(meal_id: edamame.id,
                                meal_category_id: starter.id                            
 )
@@ -722,15 +737,22 @@ p "Allergens created!"
 p "Creating allergen tags..."
 
 a_tag_1 = AllergenTag.new(
-    meal_id: nigiri_salmon.id,
-    allergen_id: fish_a.id
+    meal_id: crab_salad.id,
+    allergen_id: crustaceans_a.id
 )
 a_tag_1.save!
 p a_tag_1
 
+a_tag_111 = AllergenTag.new(
+    meal_id: tataki.id,
+    allergen_id: fish.id
+)
+a_tag_111.save!
+p a_tag_111
+
 a_tag_2 = AllergenTag.new(
-    meal_id: crab_roll.id,
-    allergen_id: shellfish_a.id
+    meal_id: nigiri_salmon.id,
+    allergen_id: fish_a.id
 )
 a_tag_2.save!
 p a_tag_2
@@ -743,25 +765,256 @@ a_tag_3.save!
 p a_tag_3
 
 a_tag_4 = AllergenTag.new(
-    meal_id: shrimp_tempura.id,
+    meal_id: nigiri_shrimp.id,
     allergen_id: shellfish_a.id
 )
 a_tag_4.save!
 p a_tag_4
 
 a_tag_5 = AllergenTag.new(
-    meal_id: takumi_roll.id,
-    allergen_id: fish_a.id
+    meal_id: nigiri_octopus.id,
+    allergen_id: shellfish_a.id
 )
 a_tag_5.save!
 p a_tag_5
 
 a_tag_6 = AllergenTag.new(
-    meal_id: maki_tuna.id,
+    meal_id: nigiri_unagi.id,
     allergen_id: fish_a.id
 )
 a_tag_6.save!
 p a_tag_6
+
+a_tag_66 = AllergenTag.new(
+    meal_id: nigiri_salmon_t.id,
+    allergen_id: fish_a.id
+)
+a_tag_66.save!
+p a_tag_66
+
+a_tag_67 = AllergenTag.new(
+    meal_id: sashimi_salmon.id,
+    allergen_id: fish_a.id
+)
+a_tag_67.save!
+p a_tag_67
+
+a_tag_68 = AllergenTag.new(
+    meal_id: sashimi_tuna.id,
+    allergen_id: fish_a.id
+)
+a_tag_68.save!
+p a_tag_68
+
+a_tag_7 = AllergenTag.new(
+    meal_id: maki_salmon.id,
+    allergen_id: fish_a.id
+)
+a_tag_7.save!
+p a_tag_7
+
+a_tag_8 = AllergenTag.new(
+    meal_id: maki_tuna.id,
+    allergen_id: fish_a.id
+)
+a_tag_8.save!
+p a_tag_8
+
+a_tag_9 = AllergenTag.new(
+    meal_id: california.id,
+    allergen_id: fish_a.id
+)
+a_tag_9.save!
+p a_tag_9
+
+a_tag_10 = AllergenTag.new(
+    meal_id: spicy_tuna.id,
+    allergen_id: fish_a.id
+)
+a_tag_10.save!
+p a_tag_10
+
+a_tag_11 = AllergenTag.new(
+    meal_id: crab_roll.id,
+    allergen_id: crustaceans_a.id
+)
+a_tag_11.save!
+p a_tag_11
+
+a_tag_12 = AllergenTag.new(
+    meal_id: takumi_roll.id,
+    allergen_id: fish_a.id
+)
+a_tag_12.save!
+p a_tag_12
+
+a_tag_13 = AllergenTag.new(
+    meal_id: takumi_roll.id,
+    allergen_id: shellfish_a.id
+)
+a_tag_13.save!
+p a_tag_13
+
+a_tag_14 = AllergenTag.new(
+    meal_id: shrimp_tempura.id,
+    allergen_id: wheat_a.id
+)
+a_tag_14.save!
+p a_tag_14
+
+a_tag_15 = AllergenTag.new(
+    meal_id: shrimp_tempura.id,
+    allergen_id: shellfish_a.id
+)
+a_tag_15.save!
+p a_tag_15
+
+a_tag_16 = AllergenTag.new(
+    meal_id: california_tempura.id,
+    allergen_id: fish_a.id
+)
+a_tag_16.save!
+p a_tag_16
+
+a_tag_17 = AllergenTag.new(
+    meal_id: california_tempura.id,
+    allergen_id: wheat_a.id
+)
+a_tag_17.save!
+p a_tag_17
+
+a_tag_18 = AllergenTag.new(
+    meal_id: crab_tempura.id,
+    allergen_id: crustaceans_a.id
+)
+a_tag_18.save!
+p a_tag_18
+
+a_tag_19 = AllergenTag.new(
+    meal_id: crab_tempura.id,
+    allergen_id: wheat_a.id
+)
+a_tag_19.save!
+p a_tag_19
+
+a_tag_20 = AllergenTag.new(
+    meal_id: artichoke_tempura.id,
+    allergen_id: wheat_a.id
+)
+a_tag_20.save!
+p a_tag_20
+
+a_tag_21 = AllergenTag.new(
+    meal_id: takumi_tempura.id,
+    allergen_id: fish_a.id
+)
+a_tag_21.save!
+p a_tag_21
+
+a_tag_22 = AllergenTag.new(
+    meal_id: takumi_tempura.id,
+    allergen_id: shellfish_a.id
+)
+a_tag_22.save!
+p a_tag_22
+
+a_tag_23 = AllergenTag.new(
+    meal_id: takumi_tempura.id,
+    allergen_id: wheat_a.id
+)
+a_tag_23.save!
+p a_tag_23
+
+a_tag_24 = AllergenTag.new(
+    meal_id: tempura_icecream.id,
+    allergen_id: wheat_a.id
+)
+a_tag_24.save!
+p a_tag_24
+
+ a_tag_25 = AllergenTag.new(
+     meal_id: setas.id,
+     allergen_id: wheat_a.id
+ )
+ a_tag_25.save!
+ p a_tag_25
+
+# a_tag_26 = AllergenTag.new(
+#     meal_id: .id,
+#     allergen_id: .id
+# )
+# a_tag_26.save!
+# p a_tag_26
+
+# a_tag_27 = AllergenTag.new(
+#     meal_id: .id,
+#     allergen_id: .id
+# )
+# a_tag_27.save!
+# p a_tag_27
+
+# a_tag_28 = AllergenTag.new(
+#     meal_id: .id,
+#     allergen_id: .id
+# )
+# a_tag_28.save!
+# p a_tag_28
+
+# a_tag_29 = AllergenTag.new(
+#     meal_id: .id,
+#     allergen_id: .id
+# )
+# a_tag_29.save!
+# p a_tag_29
+
+# a_tag_30 = AllergenTag.new(
+#     meal_id: .id,
+#     allergen_id: .id
+# )
+# a_tag_30.save!
+# p a_tag_30
+
+# a_tag_31 = AllergenTag.new(
+#     meal_id: .id,
+#     allergen_id: .id
+# )
+# a_tag_31.save!
+# p a_tag_31
+
+# a_tag_32 = AllergenTag.new(
+#     meal_id: .id,
+#     allergen_id: .id
+# )
+# a_tag_32.save!
+# p a_tag_32
+
+# a_tag_33 = AllergenTag.new(
+#     meal_id: .id,
+#     allergen_id: .id
+# )
+# a_tag_33.save!
+# p a_tag_33
+
+# a_tag_34 = AllergenTag.new(
+#     meal_id: .id,
+#     allergen_id: .id
+# )
+# a_tag_34.save!
+# p a_tag_34
+
+# a_tag_35 = AllergenTag.new(
+#     meal_id: .id,
+#     allergen_id: .id
+# )
+# a_tag_35.save!
+# p a_tag_35
+
+# a_tag_36 = AllergenTag.new(
+#     meal_id: .id,
+#     allergen_id: .id
+# )
+# a_tag_36.save!
+# p a_tag_36
 
 p "Allergen tags created!"
 

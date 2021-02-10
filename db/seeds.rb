@@ -94,23 +94,23 @@ winery.image.attach(io: URI.open('https://res.cloudinary.com/dqstmox0s/image/upl
 winery.save!
 p winery
 
-drinks= Menu.new(name:"Bebidas",
-                menu_type:"drink"
-                )
-drinks.image.attach(io: URI.open('https://res.cloudinary.com/dqstmox0s/image/upload/v1612449910/te-tonic-1_f6vl8c.jpg'), filename: 'te-tonic-1_f6vl8c.jpg', content_type: 'jpg')
-drinks.save!
-p drinks
+# drinks= Menu.new(name:"Bebidas",
+#                 menu_type:"drink"
+#                 )
+# drinks.image.attach(io: URI.open('https://res.cloudinary.com/dqstmox0s/image/upload/v1612449910/te-tonic-1_f6vl8c.jpg'), filename: 'te-tonic-1_f6vl8c.jpg', content_type: 'jpg')
+# drinks.save!
+# p drinks
 
 p "Menus created..."
 
 p "Creating set menus..."
 
-executive_menu = SetMenu.new(name:"Menú del medio día",
-                             price: "12.50"
-                            )
-executive_menu.image.attach(io: URI.open('https://res.cloudinary.com/dqstmox0s/image/upload/v1612449912/mahmoud-fawzy-MNbOMvT1cUU-unsplash_qzhjuw.jpg'), filename: 'mahmoud-fawzy-MNbOMvT1cUU-unsplash_qzhjuw.jpg', content_type: 'jpg')
-executive_menu.save!
-p executive_menu
+# executive_menu = SetMenu.new(name:"Menú del medio día",
+#                              price: "12.50"
+#                             )
+# executive_menu.image.attach(io: URI.open('https://res.cloudinary.com/dqstmox0s/image/upload/v1612449912/mahmoud-fawzy-MNbOMvT1cUU-unsplash_qzhjuw.jpg'), filename: 'mahmoud-fawzy-MNbOMvT1cUU-unsplash_qzhjuw.jpg', content_type: 'jpg')
+# executive_menu.save!
+# p executive_menu
 
 p "Set menus created..."
 
@@ -1468,6 +1468,12 @@ f_tag_60 = FilterTag.new(
 f_tag_60.save!
 p f_tag_60
 
+f_tag_61 = FilterTag.new(
+    meal_id: nigiri_artichoke_t.id,
+    filter_id: vegan.id
+)
+f_tag_61.save!
+p f_tag_61
 
 p 'Filter tags created!'
 

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'bookings/index'
   get 'dashboards/show'
   devise_for :users do
   end
@@ -12,4 +13,5 @@ Rails.application.routes.draw do
       resources :drinks, only: [:index]
     end
     resources :set_menus, only: [:show]
+    resources :bookings, only: [:index]
 end

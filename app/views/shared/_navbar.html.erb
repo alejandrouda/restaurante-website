@@ -17,21 +17,23 @@
                 <div class="nav-responsive">
                     <ul class="nav-links">
                         <li>
-                            <a href="#about" class="nav-link nav-font">Restaurant</a></li>
+                            <%= link_to 'Restaurante', root_path, class: "nav-link nav-font"%>
                         <li>
                             <%= link_to 'Carta', menus_path, class: "nav-link nav-font" %>
                         </li>
                         <li>
-                            <a href="#contact" class="nav-link nav-font">Galería</a>
+                            <%= link_to 'Galería', root_path, class: "nav-link nav-font"%>
                         </li>
                         <li>
-                            <a href="#contact" class="nav-link nav-font">Contacto</a>
+                           <%= link_to 'Contacto', bookings_index_path, class: "nav-link nav-font" %>
                         </li>
                     </ul>
                     <div class="nav-sec-elements">
-                        <div class="nav-btn">
-                            <a href="#">Reservar</a>    
-                        </div>
+                            <%= link_to(bookings_index_path) do %>
+                                <div class="nav-btn">
+                                    <p>Reservar</p>
+                                </div>
+                            <% end %>
                         <div class="language-selector">
                             <p>ES</p>
                             <i class="fas fa-sort-down"></i>

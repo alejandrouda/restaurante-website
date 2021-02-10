@@ -8,10 +8,11 @@
                         <div class="landing-block-logo">
                             <img src="https://res.cloudinary.com/dqstmox0s/image/upload/v1612343064/Restaurante%20website/Component_513_1_d60mcx.svg" alt="Logo">
                         </div>
-                        <div class="landing-block-btn">
-                            <a href="#">Reserva una mesa</a>
-                            
-                        </div>
+                        <%= link_to(bookings_index_path) do %>
+                            <div class="landing-block-btn">
+                                <p>Reserva una mesa</p>
+                            </div>
+                        <% end %>
                     </div>
                 </div>
             </div>

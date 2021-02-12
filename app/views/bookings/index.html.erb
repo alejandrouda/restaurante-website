@@ -1,8 +1,57 @@
 
+<div class="bookings-background">
+    <div class="main-container">
+        <div class="sec-container">
+            <div class="th-container">
+                <div class="bookings-title">
+                    <h2>Reservas</h2>
+                </div>
+                <div class="bookings-display">
+                    <div class="bookings-image">
+                        <img src="https://res.cloudinary.com/dqstmox0s/image/upload/c_scale,w_684/v1612439695/danis-lou-jfZfdQtcH6k-unsplash_jgrvkt.jpg" alt="Restaurante image">
+                    </div>
+                    <div class="bookings-form">
+                        <form action="https://formspree.io/f/{form_id}" method="post">
+                            <div class="form-block full-input">
+                                <label for="name">Nombre *</label>
+                                <input name="Name" id="name" type="name">
+                            </div>
+                            <div class="form-block full-input">
+                                <label for="email">Email *</label>
+                                <input name="Email" id="email" type="email">
+                            </div>
+                            <div class="form-block">
+                                <label for="telephone">Teléfono *</label>
+                                <input name="Telephone" id="telephone" type="telephone">
+                            </div>
+                            <div class="form-block">
+                                <label for="pax">Comensales *</label>
+                                <input name="Pax" id="pax" type="pax">
+                            </div>
+                            <div class="form-block">
+                                <label for="date">Fecha *</label>
+                                <input name="Date" id="date" type="date">
+                            </div>
+                            <div class="form-block">
+                                <label for="time">Hora *</label>
+                                <input name="Time" id="time" type="time">
+                            </div>
+                            <div class="form-block full-input">
+                                <label for="email">Comentarios *</label>
+                                <input name="Email" id="email" type="email">
+                            </div>
+                            <button type="submit">Reservar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="main-container">
     <div class="sec-container">
-        <div class="th-container">
-            <h2 style="text-align:center; margin-top: 150px">Building <i class="fas fa-tools"></i></h2>
-        </div>
+        <%= render 'shared/testimonial_card' %>
+        <%= render 'shared/newsletter' %>
+        <%= render 'shared/footer' %>
     </div>
 </div>

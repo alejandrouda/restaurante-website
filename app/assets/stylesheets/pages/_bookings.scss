@@ -1,0 +1,47 @@
+.bookings-background {
+  background-color: $lighter-orange;
+  min-height: 100vh;
+  height: fit-content;
+}
+
+.bookings-title {
+  margin-top: 100px;
+  h2 {
+    text-align: center;
+    font-weight: 600;
+    font-size: 42px;
+    font-family: $headers-font;
+  }
+}
+
+.bookings-image {
+  img {
+    height: 445px;
+    width: 585px;
+  }
+}
+
+.bookings-form {
+  text-align: right;
+  width: 550px;
+}
+
+.bookings-display {
+  margin-top: 80px;
+  padding: 0 60px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-block {
+  text-align: left;
+  label {
+    display: block;
+  }
+}
+
+.full-input {
+  input {
+    width: 100%;
+  }
+}

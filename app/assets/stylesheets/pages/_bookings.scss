@@ -16,8 +16,8 @@
 
 .bookings-image {
   img {
-    height: 445px;
-    width: 585px;
+    height: 400px;
+    width: 520px;
   }
 }
 
@@ -27,7 +27,7 @@
 }
 
 .bookings-display {
-  margin-top: 80px;
+  margin-top: 50px;
   padding: 0 60px;
   display: flex;
   justify-content: space-between;
@@ -71,8 +71,8 @@
 @media (max-width: 1172px) {
   .bookings-image {
     img {
-      height: 400px;
-      width: 520px;
+      height: 380px;
+      width: 490px;
     }
   }
 }

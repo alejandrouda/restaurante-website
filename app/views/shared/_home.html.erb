@@ -1,23 +1,6 @@
 <%# ---------------------FIRST SECTION------------------------- %>
 <section id="first-section">
-    <div class="landing-background-image">
-        <div class="landing-background-filter">
-            <div class="main-container">
-                <div class="landing-container">
-                    <div class="landing-block">
-                        <div class="landing-block-logo">
-                            <img src="https://res.cloudinary.com/dqstmox0s/image/upload/v1612343064/Restaurante%20website/Component_513_1_d60mcx.svg" alt="Logo">
-                        </div>
-                        <%= link_to(bookings_index_path) do %>
-                            <div class="landing-block-btn">
-                                <p>Reserva una mesa</p>
-                            </div>
-                        <% end %>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <%= render 'shared/landing_first_section' %>
 </section>
 <%# ---------------------SECOND SECTION------------------------- %>
 <section id="second-section">
@@ -36,9 +19,6 @@
     <%= render 'shared/newsletter' %>
     <%= render 'shared/footer' %>
 </section>
-
-
-
 
 <%# ---------------------CMS btns------------------------- %>
 <div class="main-container">

@@ -23,7 +23,7 @@
 
 .bookings-form {
   text-align: right;
-  width: 550px;
+  max-width: 550px;
 }
 
 .bookings-display {
@@ -38,10 +38,62 @@
   label {
     display: block;
   }
+  input {
+    padding: 4px 0;
+  }
 }
 
 .full-input {
   input {
     width: 100%;
+  }
+}
+
+.half-input {
+  width: 48%;
+  input {
+    width: 100%;
+  }
+}
+
+.flex-inputs {
+  display: flex;
+  justify-content: space-between;
+}
+
+.right-input {
+  text-align: right;
+  label {
+    text-align: left;
+  }
+}
+
+@media (max-width: 1172px) {
+  .bookings-image {
+    img {
+      height: 400px;
+      width: 520px;
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .bookings-image {
+    img {
+      height: 350px;
+      width: 450px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .bookings-image {
+    img {
+      display: none;
+    }
+  }
+
+  .bookings-display {
+    justify-content: center;
   }
 }

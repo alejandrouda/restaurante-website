@@ -20,27 +20,33 @@
                                 <label for="email">Email *</label>
                                 <input name="Email" id="email" type="email">
                             </div>
-                            <div class="form-block">
-                                <label for="telephone">Teléfono *</label>
-                                <input name="Telephone" id="telephone" type="telephone">
+                            <div class="flex-inputs">
+                                <div class="form-block half-input left-input">
+                                    <label for="telephone">Teléfono *</label>
+                                    <input name="Telephone" id="telephone" type="telephone">
+                                </div>
+                                <div class="form-block half-input right-input">
+                                    <label for="pax">Comensales *</label>
+                                    <input name="Pax" id="pax" type="pax">
+                                </div>
                             </div>
-                            <div class="form-block">
-                                <label for="pax">Comensales *</label>
-                                <input name="Pax" id="pax" type="pax">
-                            </div>
-                            <div class="form-block">
-                                <label for="date">Fecha *</label>
-                                <input name="Date" id="date" type="date">
-                            </div>
-                            <div class="form-block">
-                                <label for="time">Hora *</label>
-                                <input name="Time" id="time" type="time">
+                            <div class="flex-inputs">
+                                <div class="form-block half-input">
+                                    <label for="date">Fecha *</label>
+                                    <input name="Date" id="date" type="date">
+                                </div>
+                                <div class="form-block half-input">
+                                    <label for="time">Hora *</label>
+                                    <input name="Time" id="time" type="time">
+                                </div>
                             </div>
                             <div class="form-block full-input">
                                 <label for="comments">Comentarios *</label>
                                 <input name="Comments" id="comments" type="comments">
                             </div>
-                            <button type="submit">Reservar</button>
+                            <div class="book-btn">
+                                <button type="submit">Reservar</button>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -48,10 +54,7 @@
         </div>
     </div>
 </div>
-<div class="main-container">
-    <div class="sec-container">
-        <%= render 'shared/testimonial_card' %>
-        <%= render 'shared/newsletter' %>
-        <%= render 'shared/footer' %>
-    </div>
-</div>
+
+<%= render 'shared/testimonial_card' %>
+<%= render 'shared/newsletter' %>
+<%= render 'shared/footer' %>
